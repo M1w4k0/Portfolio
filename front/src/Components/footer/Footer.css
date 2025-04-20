@@ -1,0 +1,169 @@
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    font-size: 0.9rem;
+  }
+
+  .contact-section {
+    width: 100vw;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .cafe{
+    width:100px;
+    height: 100px;
+  }
+
+  .contact-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: black;
+  }
+  
+  .contact-infos {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .contact-box {
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    /* transition: all 0.2s ease;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0); */
+  }
+
+  /* .contact-box:hover{
+    transform: scale(1.02) translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  } */
+  
+  .contact-box img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .contact-box.email{
+    background-color: #fff6fd;
+  }
+
+  .contact-box.phone{
+    background-color: #f3fdff;
+  }
+
+
+
+span {
+    color: grey;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    margin: 5rem;
+  }
+  
+.contact-form input,
+.contact-form textarea {
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #f3f6f9;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 65%;
+  justify-self: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  color: #333;
+}
+
+/* 🖱️ Hover effect */
+.contact-form input:hover,
+.contact-form textarea:hover {
+  transform: scale(1.02) translateY(-1px);
+  box-shadow: 0 6px 13px rgba(0, 0, 0, 0.1);
+}
+
+/* ✨ Focus effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  color: #777; /* texte plus clair */
+}
+
+  .contact-form button {
+    padding: 1rem;
+    background-color: #2d3cff;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 10rem;
+    margin-top: 2rem;
+  }
+  
+  .contact-form button:hover {
+    background-color: #1f2acc;
+    cursor: pointer;
+  }
+
+
+  @media (max-width: 768px) {
+
+    .cafe{
+      width:80px;
+      height: 80px;
+    }
+
+    .contact-title {
+      font-size: 2.5rem;
+      padding: 0 2rem;
+    }
+  
+    .contact-infos {
+      flex-direction: column;            
+      gap: 1rem;
+      justify-self: center;
+      margin-bottom: 2rem;
+      align-items: center;
+    }
+  
+    .contact-box {
+      width: 75%; 
+      justify-content: left;            
+    }
+  
+    .contact-box img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .contact-form {
+      margin: 2rem 2rem;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      width: 90%;
+    }
+  
+    .contact-form button {
+      width: 40%;
+      margin: 7px;
+    }
+  }
+  
+  
