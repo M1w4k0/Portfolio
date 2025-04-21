@@ -16,12 +16,12 @@
     height: 90px;
   }
 
-  .contact-title {
+  /* .contact-title {
     font-size: 3rem;
     font-weight: bold;
     margin-bottom: 4rem;
     color: black;
-  }
+  } */
   
   .contact-infos {
     display: flex;
@@ -58,12 +58,6 @@
     background-color: #f3fdff;
   }
 
-
-
-span {
-    color: grey;
-  }
-  
   .contact-form {
     display: flex;
     flex-direction: column;

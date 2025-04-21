@@ -13,7 +13,7 @@ import Footer from './Components/footer/Footer';
 function App() {
   return (
     <Router>
-       <Header />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/experiences" element={<Experiences />} />
@@ -21,7 +21,7 @@ function App() {
         <Route path="/skills" element={<Skills />} />
         {/* <Route path="/about" element={<About />} /> */}
       </Routes>
-      <Footer />
+      <Footer/>
     </Router>
   );
 }

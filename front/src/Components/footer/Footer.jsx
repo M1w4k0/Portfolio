@@ -1,11 +1,18 @@
-import React from 'react';
+import React from "react";
+import { TypewriterEffect } from "./TypewriterEffect";
 import './Footer.css';
 
 export default function Footer() {
+  const words = [
+    { text: "Take a coffee & chat with me !" },
+  ];
+
   return (
     <section className="contact-section">
-      <img src="/assets/cafe.png" class="cafe"/>
-      <h2 className="contact-title">Take a coffee & chat with me</h2>
+      <img src="/assets/cafe.png" className="cafe"/>
+      {/* Typewriter effect */}
+      <TypewriterEffect words={words} />
+ 
 
       <div className="contact-infos">
         <div className="contact-box email">
