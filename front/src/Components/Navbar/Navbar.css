@@ -1,7 +1,6 @@
 .navbar {
-    background-color: #333;
+    background-color: transparent;
     padding: 1rem;
-    height: 100vh;
   }
   
   .navbar ul {
@@ -14,11 +13,11 @@
   }
   
   .navbar a {
-    color: white;
+    color: #5006e1;
     text-decoration: none;
   }
   
   .navbar a:hover {
-    text-decoration: underline;
+    color: #ccbee6;
   }
   
