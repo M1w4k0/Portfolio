@@ -6,7 +6,6 @@ import Home from './pages/Home/Home';
 import Experiences from './pages/Experiences/Experiences';
 import Projects from './pages/Projects/Projects';
 import Skills from './pages/Skills/Skills';
-import Navbar from './Components/Navbar/Navbar';
 import Header from './Components/Header/Header';
 import Footer from './Components/footer/Footer';
 
@@ -14,7 +13,6 @@ import Footer from './Components/footer/Footer';
 function App() {
   return (
     <Router>
-       <Navbar />
        <Header />
       <Routes>
         <Route path="/" element={<Home />} />

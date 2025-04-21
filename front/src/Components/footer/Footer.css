@@ -12,14 +12,14 @@
   }
   
   .cafe{
-    width:100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
   }
 
   .contact-title {
     font-size: 3rem;
     font-weight: bold;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     color: black;
   }
   
