@@ -9,7 +9,6 @@ export default function Footer() {
 
   return (
     <section className="contact-section">
-      <img src="/assets/cafe.png" className="cafe"/>
       {/* Typewriter effect */}
       <TypewriterEffect words={words} />
  
