@@ -1,20 +1,20 @@
 import React from "react";
 import "./Home.css";
+import WhoAmI from "./WhoAmI";
 
 export default function Home() {
   return (
-    <section className="home-hero">
+    <><section className="home-hero">
       <div className="spline-background">
-        <iframe
+        {/* <iframe
           src="https://my.spline.design/animatedshapeblend-nn1FHRKGdTZGxH850fuT9lNb/"
           frameBorder="0"
           width="100%"
-          height="100%"
-        />
+          height="100%" /> */}
       </div>
       <div className="home-content">
         <div className="hero-tags">
-        <div className="tag tag-role">
+          <div className="tag tag-role">
             <span>Your new <strong>intern</strong></span>
           </div>
           <a
@@ -36,9 +36,10 @@ export default function Home() {
         </div>
         <h1>Zoé Charrier </h1>
         <p>
-          Double compétence Epitech x NEOMA : je code, je pense produit, je crée de la valeur.
+          For me, it’s all about coding with purpose, thinking like a product designer, and creating real, meaningful value.
         </p>
       </div>
     </section>
+    <WhoAmI /></>
   );
 }

@@ -16,7 +16,7 @@
 }
 
 .spline-background iframe {
-  width: 135vw;
+  width: 150vw;
   height: 100vh;
 }
 
@@ -41,7 +41,7 @@
   font-size: 1.6rem;
   font-weight: 300;
   color: black;
-  max-width: 600px;
+  max-width: 620px;
   margin: 0;
 }
 
@@ -58,7 +58,7 @@
 .tag-role{
   padding: 0.5rem 1rem;
   border-radius: 12px;
-  background-color: #e6e9ed;
+  background-color: #d7ff88;
   height: 30px;
   align-items: center;
   margin-right: 20px;
@@ -74,20 +74,21 @@
   color: #5633ff;
 }
 
-.tag-linkedin img {
-  width: 50px;
-  height: 50px;
-  /* animation: float 2s ease-in-out infinite; */
-}
-
+.tag-linkedin img,
 .tag-github img {
   width: 50px;
   height: 50px;
   /* animation: float 2s ease-in-out infinite; */
+  transition: transform 0.3s ease;
+}
+
+.tag-linkedin img:hover,
+.tag-github img:hover {
+  transform: scale(1.13);
 }
 
 /* @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+  50% { transform: translateY(-2px); }
 }
  */
