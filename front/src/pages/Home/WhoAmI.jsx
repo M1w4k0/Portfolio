@@ -52,7 +52,9 @@ export default function WhoAmI() {
               <h3>Where I aspire to go </h3>
               <p  className='texte3'>My ambition is to build a hybrid profile — someone who can understand both the technical foundations and the strategic needs of a business. I’m driven by the idea of launching my own startup, and I want to be able to take ownership of the entire process: from designing solutions and managing projects, to shaping business models and making data-informed decisions. To me, tech is not just a skillset — it’s a way to bring ideas to life, solve real challenges, and build something meaningful.</p>
             </div>
+
           </div>
+          {/* <img src="./assets/fusee.png" alt="fusée" className='fusee'/> */}
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 .custom-section {
-  background-color: #684ee6;
+  background-color: #1a0b44;
   padding: 128px 0;
   display: flex;
   flex-direction: column;
@@ -20,7 +20,7 @@
 }
 
 .main-title {
-  color: white;
+  color: #c5ef71;
   font-size: 96px;
   line-height: 1.1em;
   letter-spacing: -5px;
@@ -37,7 +37,7 @@
   justify-content: center;
 }
 
-.sticky-card1, .sticky-card2, .sticky-card3 {
+.sticky-card1, .sticky-card3 {
   position: sticky;
   top: 20vh;
   display: flex;
@@ -52,8 +52,28 @@
   margin-bottom: 7vh;
 }
 
-.sticky-card1.in-view, .sticky-card2.in-view, .sticky-card3.in-view {
-  background-color: #efedfa;
+.sticky-card1.in-view, .sticky-card3.in-view {
+  background-color: #f2efff;
+  width: 70%;
+}
+
+.sticky-card2 {
+  position: sticky;
+  top: 20vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: #d7ff88;
+  border-radius: 28px;
+  padding: 48px;
+  height: 55vh;
+  transition: transform 0.6s ease, background 0.6s ease, width 0.6s ease;
+  overflow: hidden;
+  width: 99%;
+  margin-bottom: 7vh;
+}
+
+.sticky-card2.in-view{
+  background-color: #efffcf;
   width: 70%;
 }
 
@@ -93,8 +113,8 @@ h3  {
   color: #2B2B2B;
   font-weight: 400;
   margin-top: 8%;
-  align-self: center; /* centre le paragraphe */
-  text-align: center;
+  align-self: left; /* centre le paragraphe */
+  text-align: left;
   max-width: 750px;
 }
 
@@ -104,4 +124,12 @@ h3  {
   object-fit: cover;
   border-top-left-radius: 18px;
   border-bottom-left-radius: 18px;
+}
+
+
+.fusee{
+
+  width: 45%;
+  height: 80%;
+  index-z: 2;
 }
