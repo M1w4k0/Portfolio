@@ -30,31 +30,28 @@ export default function WhoAmI() {
         </div>
 
         <div className="sticky-frame">
-          <div className="sticky-card1">
+          <div className="sticky-card sticky-card1">
             <div className="card-text">
-              <h3>My life</h3>
-              <p>Handle dynamic data with the built-in content manager. Link data dynamically to any part of your website.</p>
-              <a href="#" className="link">View Details</a>
+              <h3>Zoé Charrier</h3>
+              <p  className='texte1'>19 years</p>
+              <p  className='texte2'>
+               I'm a business student at Neoma Business School in Paris. Passionate about the world of data, I chose to complete my course with an immersion at EPITECH's Coding Academy, to develop my web development skills.
+              </p>
             </div>
-            <img src="https://droip.com/wp-content/uploads/2025/03/CMS1.webp" alt="Content Manager" className="card-img" />
+            <img src="./assets/PhotoCV.jpeg" alt="Photo CV" className="card-img" />
           </div>
 
-          <div className="sticky-card2">
+          <div className="sticky-card sticky-card2">
             <div className="card-text">
               <h3>Some Hobbies</h3>
-              <p>Organize and edit all media assets, including SVGs, Lottie, and icons, with the built-in image and shape editor.</p>
-              <a href="#" className="link">View Details</a>
             </div>
-            <img src="https://droip.com/wp-content/uploads/2025/03/Media-Manager.webp" alt="Media Manager" className="card-img" />
           </div>
 
-          <div className="sticky-card3">
-            <div className="card-text">
+          <div className="sticky-card sticky-card3">
+            <div className="card-text3">
               <h3>Where I aspire to go </h3>
-              <p>Dynamically update SEO content across pages to optimize your website's search performance.</p>
-              <a href="#" className="link">View Details</a>
+              <p  className='texte3'>My ambition is to build a hybrid profile — someone who can understand both the technical foundations and the strategic needs of a business. I’m driven by the idea of launching my own startup, and I want to be able to take ownership of the entire process: from designing solutions and managing projects, to shaping business models and making data-informed decisions. To me, tech is not just a skillset — it’s a way to bring ideas to life, solve real challenges, and build something meaningful.</p>
             </div>
-            <img src="https://droip.com/wp-content/uploads/2025/03/dymanic-seo2-1.webp" alt="SEO" className="card-img" />
           </div>
         </div>
       </div>
