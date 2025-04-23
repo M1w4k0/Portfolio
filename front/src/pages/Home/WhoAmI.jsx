@@ -1,54 +1,61 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import './WhoAmI.css';
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function WhoAmI() {
-  const frame1Ref = useRef(null);
-  const frame2Ref = useRef(null);
-
   useEffect(() => {
-    // Frame 1 animation (inchangée)
-    gsap.fromTo(
-      frame1Ref.current,
-      {
-        y: 100,
-        width: '94%',
-        height: '80vh',
-      },
-      {
-        y: 40,
-        width: '70%',
-        height: '55vh',
-        ease: 'power4.out',
-        scrollTrigger: {
-          trigger: frame1Ref.current,
-          start: 'top 90%',
-          end: 'top 20%',
-          scrub: 1.5,
-          onEnter: () => {},
-        },
-      }
-    );
+    const cards = document.querySelectorAll('.sticky-card');
   
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        } else {
+          entry.target.classList.remove('in-view');
+        }
+      });
+    }, {
+      threshold: 0.2 // déclenchement plus tôt
+    });
+  
+    cards.forEach(card => observer.observe(card));
+  
+    return () => observer.disconnect();
   }, []);
-  
 
   return (
-    <section className="whoami-stage">
-      <div className="whoami-header">
-        <h1 className="whotext">Who Am I?</h1>
-      </div>
-
-      <div className="whoami-stack">
-        <div className="whoami-frame frame1" ref={frame1Ref}>
-          <p>Step 1: Discover who I am</p>
+    <section className="custom-section">
+      <div className="container">
+        <div className="intro">
+          <h2 className="main-title">Who am I ? </h2>
         </div>
 
-        <div className="whoami-frame frame2" ref={frame2Ref}>
-          <p>Step 2: My goals</p>
+        <div className="sticky-frame">
+          <div className="sticky-card1">
+            <div className="card-text">
+              <h3>My life</h3>
+              <p>Handle dynamic data with the built-in content manager. Link data dynamically to any part of your website.</p>
+              <a href="#" className="link">View Details</a>
+            </div>
+            <img src="https://droip.com/wp-content/uploads/2025/03/CMS1.webp" alt="Content Manager" className="card-img" />
+          </div>
+
+          <div className="sticky-card2">
+            <div className="card-text">
+              <h3>Some Hobbies</h3>
+              <p>Organize and edit all media assets, including SVGs, Lottie, and icons, with the built-in image and shape editor.</p>
+              <a href="#" className="link">View Details</a>
+            </div>
+            <img src="https://droip.com/wp-content/uploads/2025/03/Media-Manager.webp" alt="Media Manager" className="card-img" />
+          </div>
+
+          <div className="sticky-card3">
+            <div className="card-text">
+              <h3>Where I aspire to go </h3>
+              <p>Dynamically update SEO content across pages to optimize your website's search performance.</p>
+              <a href="#" className="link">View Details</a>
+            </div>
+            <img src="https://droip.com/wp-content/uploads/2025/03/dymanic-seo2-1.webp" alt="SEO" className="card-img" />
+          </div>
         </div>
       </div>
     </section>

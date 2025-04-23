@@ -1,48 +1,94 @@
-.whoami-stage {
-    background-color: #5633ff;
-    min-height: 120vh;
-    padding-top: 10vh;
-    overflow-x: hidden;
-    position: relative;
-  }
-  
-  .whoami-header {
-    position: sticky;
-    top: 0;
-    background-color: #5633ff;
-    z-index: 10;
-    padding: 3rem;
-    width: 100%;
-  }
-  
-  .whotext {
-    color: white;
-    font-size: 6rem;
-    margin: 0;
-  }
-  
-  .whoami-stack {
-    height: 110vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    position: relative;
-  }
-  
-  .whoami-frame {
-    position: absolute;
-    background: white;
-    border-radius: 24px;
-    padding: 3rem;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-    width: 70%;
-    height: 55vh;
-    opacity: 0;
-  }
-  
+.custom-section {
+  background-color: #684ee6;
+  padding: 128px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 
-  .frame1 {
-    z-index: 1;
-    opacity: 1;
-  }
-  
+.container {
+  max-width: 1360px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.intro {
+  max-width: 600px;
+  margin-bottom: 120px;
+}
+
+.main-title {
+  color: white;
+  font-size: 96px;
+  line-height: 1.1em;
+  letter-spacing: -5px;
+  font-weight: 500;
+  margin: 0;
+
+}
+
+.sticky-frame {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  align-items: center;
+  justify-content: center;
+}
+
+.sticky-card1, .sticky-card2, .sticky-card3 {
+  position: sticky;
+  top: 20vh;
+  display: flex;
+  justify-content: space-between;
+  background-color: #CDC6FB;
+  border-radius: 28px;
+  padding: 48px;
+  height: 55vh;
+  transition: transform 0.6s ease, background 0.6s ease, width 0.6s ease;
+  overflow: hidden;
+  width: 99%;
+  margin-bottom: 7vh;
+}
+
+.sticky-card1.in-view, .sticky-card2.in-view, .sticky-card3.in-view {
+  background-color: #efedfa;
+  width: 70%;
+}
+
+.card-text {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 24px;
+}
+
+.card-text h3 {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+  color: #2B2B2B;
+}
+
+.card-text p {
+  font-size: 24px;
+  line-height: 1.2em;
+  color: #2B2B2B;
+}
+
+.link {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #4A00E0;
+}
+
+.card-img {
+  max-width: 874px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+}
