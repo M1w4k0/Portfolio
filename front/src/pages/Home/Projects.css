@@ -1,0 +1,63 @@
+.projects-container {
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+  }
+  
+  .projects-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .bento-grid {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+  
+  .bento-grid-item {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .bento-grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    color: gray;
+  }
+  
+  .description {
+    font-size: 0.875rem;
+    color: #555;
+  }
+  
+  .skeleton-one {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .skeleton-one-line {
+    height: 1rem;
+    background-color: #ccc;
+    border-radius: 9999px;
+  }
+  

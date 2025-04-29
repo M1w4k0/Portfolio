@@ -2,18 +2,19 @@ import React from "react";
 import "./Home.css";
 import WhoAmI from "./WhoAmI";
 import { TimelineDemo } from "./TimelineDemo";
+import { Projects } from "./Projects";
 
 export default function Home() {
   return (
     <>
     <section className="home-hero">
-      <div className="spline-background">
-        {/* <iframe
+      {/* <div className="spline-background">
+        <iframe
       src="https://my.spline.design/animatedshapeblend-nn1FHRKGdTZGxH850fuT9lNb/"
       frameBorder="0"
       width="100%"
-      height="100%" /> */}
-      </div>
+      height="100%" />
+      </div> */}
       <div className="home-content">
         <div className="hero-tags">
           <div className="tag tag-role">
@@ -44,7 +45,7 @@ export default function Home() {
     </section>
     <WhoAmI />
     <TimelineDemo />
-    
+    <Projects />  
     </>
   );
 }
