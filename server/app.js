@@ -1,12 +1,27 @@
-const express = require('express');
-const cors = require('cors');
-require('dotenv').config();
+// File: server/app.js  (version sans helmet)
+const express = require("express");
+const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
-app.use(cors());
-app.use(express.json());
+const contactRoutes = require("./routes/contactRoutes");
 
-app.use('/api/projects', require('./routes/projects'));
+const ORIGIN = process.env.ALLOWED_ORIGIN || "http://localhost:5173";
 
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+app.use(
+  cors({
+    origin: ORIGIN,
+    methods: ["POST", "GET", "OPTIONS"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
+app.use(express.json({ limit: "64kb" }));
+
+app.get("/api/ping", (_req, res) => res.json({ message: "pong 🏓" }));
+app.use("/api/contact", contactRoutes);
+
+const PORT = process.env.PORT || 5050;
+app.listen(PORT, () => {
+  console.log(`✅ Backend on http://localhost:${PORT} (origin: ${ORIGIN})`);
+});
+

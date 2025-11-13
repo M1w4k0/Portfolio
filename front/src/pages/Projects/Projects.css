@@ -1,4 +1,61 @@
-.projects {
-    padding: 2rem;
+/* === CSS À COLLER DANS TON FICHIER CSS === */
+/* Namespace strict pour éviter toute collision */
+.cc-slice {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: clamp(24px, 8vw, 140px);
+  padding: 0;
+  min-height: 800px;          
+}
+
+.cc-slice-media {
+  width: 100%;
+  max-width: 880px;
+  height: min(60vh, 540px);
+  overflow: hidden;             /* masque l’image au bords arrondis */
+}
+
+.cc-slice-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%);      /* comme sur ta capture */
+}
+
+.cc-slice-copy {
+  justify-self: start;
+  max-width: 38ch;
+}
+
+.cc-slice-title {
+  margin: 0 0 0.75rem 0;
+  font-weight: 800;
+  line-height: 1.05;
+  font-size: clamp(28px, 4vw, 56px);
+}
+
+.cc-slice-text {
+  margin: 0;
+  line-height: 1.5;
+  font-size: clamp(14px, 1.1vw, 18px);
+  opacity: 0.95;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cc-slice {
+    grid-template-columns: 1fr;
+    gap: clamp(16px, 6vw, 32px);
+    padding: 0 clamp(12px, 5vw, 32px);
+    min-height: auto;
   }
-  
+  .cc-slice-media {
+    height: min(48vh, 380px);
+    max-width: none;
+  }
+  .cc-slice-copy {
+    max-width: 48ch;
+  }
+}

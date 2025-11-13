@@ -1,51 +1,52 @@
 import React from "react";
-import "./Home.css";
-import WhoAmI from "./WhoAmI";
-import { TimelineDemo } from "./TimelineDemo";
-import { Projects } from "./Projects";
+import Lenis from '@studio-freight/lenis';
+import { useEffect } from "react";
+import Navbar from "../../Components/Navbar/Navbar";
+// import Footer from "../../Components/footer/Footer";
+import Intro from "./Intro";
+import About from '../About /About';
+import Experiences from "../Experiences/Experiences";
+import Projects from "../Projects/Projects";
+import Skills from "../Skills/Skills";
+import ContactSection from "../Contact/ContactSection";
+import ClickSpark from '../../Components/ClickSpark/ClickSpark';
+import Scrollzoom from '../../Components/Scrollzoom/Scrollzoom';
+import './Home.css';
+
 
 export default function Home() {
+
+  useEffect( () => {
+    const lenis = new Lenis()
+   
+    function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+},[])
+
+
   return (
     <>
-    <section className="home-hero">
-      {/* <div className="spline-background">
-        <iframe
-      src="https://my.spline.design/animatedshapeblend-nn1FHRKGdTZGxH850fuT9lNb/"
-      frameBorder="0"
-      width="100%"
-      height="100%" />
-      </div> */}
-      <div className="home-content">
-        <div className="hero-tags">
-          <div className="tag tag-role">
-            <span>Your new <strong>intern</strong></span>
-          </div>
-          <a
-            className="tag tag-linkedin"
-            href="https://www.linkedin.com/in/your-profile"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="./assets/linkedin.png" alt="LinkedIn" />
-          </a>
-          <a
-            className="tag tag-github"
-            href="https://www.linkedin.com/in/your-profile"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img src="./assets/github.png" alt="Github" />
-          </a>
-        </div>
-        <h1>Zoé Charrier </h1>
-        <p>
-          For me, it’s all about coding with purpose, thinking like a product designer, and creating real, meaningful value.
-        </p>
-      </div>
-    </section>
-    <WhoAmI />
-    <TimelineDemo />
-    <Projects />  
-    </>
+    <div id="home" className="home-section">
+      <ClickSpark
+      sparkColor='#8162f4'
+      sparkSize={10}
+      sparkRadius={15}
+      sparkCount={8}
+      duration={400}
+      >
+        <Navbar />
+        <Intro />
+        <About/>
+        <Scrollzoom/>
+        <Experiences/>
+        <Projects/>
+        {/* <Skills /> */}
+        <ContactSection />
+        </ClickSpark>
+    </div></>
   );
 }

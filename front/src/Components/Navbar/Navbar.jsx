@@ -1,33 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 
 export default function Navbar() {
+
+
   return (
     <nav className="navbar">
-      <div className="logo-container">
-        <img src="./assets/logo.png" alt="Logo" className="logo bounce-in" />
-      </div>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-
+      <div className='vide'></div>
+      <ul className='barretransparente'>
+        <li><a href="#home">Home</a></li>
         <li className="nav-item dropdown">
-          <span className="dropdown-trigger">
-            Projects
-            <img src="./assets/flechebas.png" className="arrow" alt="arrow" />
-          </span>
-          <div className="dropdown-panel">
+          <a href="#experiences"><span className="dropdown-trigger">
+            Experiences
+            {/* <img src="./assets/flechebas.png" className="arrow" alt="arrow" /> */}
+          </span></a>
+          {/* <div className="dropdown-panel">
             <div className="dropdown-column">
               <div className="dropdown-item clickable">
                 <span className="icon editor" />
-                <div>
+                <div className='projects-link'>
                   <strong>Web Projects</strong>
                   <p>Frontend & backend builds</p>
                 </div>
               </div>
               <div className="dropdown-item clickable">
                 <span className="icon layout" />
-                <div>
+                <div className='projects-link'>
                   <strong>Design Systems</strong>
                   <p>Reusable components & styles</p>
                 </div>
@@ -36,75 +34,76 @@ export default function Navbar() {
             <div className="dropdown-column">
               <div className="dropdown-item clickable">
                 <span className="icon interaction" />
-                <div>
+                <div className='projects-link'>
                   <strong>Interactive Apps</strong>
                   <p>React, animations, and more</p>
                 </div>
               </div>
               <div className="dropdown-item clickable">
                 <span className="icon mobile" />
-                <div>
+                <div className='projects-link'>
                   <strong>Mobile</strong>
                   <p>Responsive & native</p>
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </li>
 
         <li className="nav-item dropdown">
-          <span className="dropdown-trigger">
-            Experiences
-            <img src="./assets/flechebas.png" className="arrow" alt="arrow" />
-          </span>
-          <div className="dropdown-panel">
+          <a href="#projects"><span className="dropdown-trigger">
+            Projects
+            {/* <img src="./assets/flechebas.png" className="arrow" alt="arrow" /> */}
+          </span></a>
+          {/* <div className="dropdown-panel">
             <div className="dropdown-column">
               <div className="dropdown-item clickable">
                 <span className="icon" />
-                <div>
+                <div className='projects-link'>
                   <strong>Internships</strong>
                   <p>Real-world experience</p>
                 </div>
               </div>
               <div className="dropdown-item clickable">
                 <span className="icon" />
-                <div>
+                <div className='projects-link'>
                   <strong>Freelance</strong>
                   <p>Client-driven work</p>
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </li>
 
         <li className="nav-item dropdown">
-          <span className="dropdown-trigger">
+          <a href="#skills"><span className="dropdown-trigger">
             Skills
-            <img src="./assets/flechebas.png" className="arrow" alt="arrow" />
-          </span>
-          <div className="dropdown-panel">
+            {/* <img src="./assets/flechebas.png" className="arrow" alt="arrow" /> */}
+          </span></a>
+          {/* <div className="dropdown-panel">
             <div className="dropdown-column">
               <div className="dropdown-item clickable">
                 <span className="icon" />
-                <div>
+                <div className='projects-link'>
                   <strong>Frontend</strong>
                   <p>React, HTML, CSS</p>
                 </div>
               </div>
               <div className="dropdown-item clickable">
                 <span className="icon" />
-                <div>
+                <div className='projects-link'>
                   <strong>Backend</strong>
                   <p>Node.js, Express, APIs</p>
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </li>
 
-        <li><Link to="/about">About</Link></li>
+        <li><a href="#about">About</a></li>
+        <a href="#contact"><button className="contact-button">Get in touch</button></a>
+
       </ul>
-      <button className="contact-button">Get in touch</button>
     </nav>
   );
 }
