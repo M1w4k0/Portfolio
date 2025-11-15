@@ -1,4 +1,4 @@
-// server/routes/contactRoutes.js  ✅ version finale
+// server/routes/contactRoutes.js  — ENVOI EMAIL: RESEND (par défaut) + fallback Gmail
 const express = require("express");
 const nodemailer = require("nodemailer");
 const rateLimit = require("express-rate-limit");
@@ -7,7 +7,7 @@ require("dotenv").config();
 
 const router = express.Router();
 
-/* ------------- utils ------------- */
+/* ----------------- utils rendu ----------------- */
 function escapeHtml(s = "") {
   return String(s)
     .replaceAll("&", "&amp;")
@@ -33,96 +33,103 @@ function renderEmail({ name, email, message }) {
   const safeName = escapeHtml(name);
   const safeEmail = escapeHtml(email);
   const safeMsg = escapeHtml(message).replace(/\n/g, "<br/>");
-
-  const html = `<!doctype html><html><head>
-<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>New message from ${safeName}</title>
-<style>
-body,table,td,a{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Arial,sans-serif}
-table{border-collapse:collapse!important}img{border:0;outline:0}
-body{margin:0!important;padding:0!important;background:#f5f7fb}
-@media (prefers-color-scheme: dark){
-  body{background:#0b0c10!important}.card{background:#12141a!important;border-color:#1c1f29!important}
-  .muted{color:#aab2c5!important}.title{color:#e6e9f2!important}.label{color:#cbd3e1!important}
-  .value{color:#f0f3fa!important}.divider{background:#1f2430!important}.btn{background:#4c8dff!important}
-  .footer{color:#97a1b6!important}
-}
-@media only screen and (max-width:600px){
-  .container{width:100%!important;padding:16px!important}.card{padding:18px!important}.title{font-size:18px!important}
-}
-</style></head>
-<body style="background:#f5f7fb;padding:60px 0">
-<table role="presentation" width="100%"><tr><td align="center">
-  <table role="presentation" width="800" class="container" style="width:800px;max-width:100%;padding:40px;">
-    <tr><td>
-      <table role="presentation" width="100%"><tr><td align="left" style="padding:4px 0 24px 0;">
-        <div class="title" style="font-weight:700;font-size:25px;letter-spacing:.2px;color:#111827">📬 New message from your portfolio</div>
-        <div class="muted" style="font-size:15px;color:#6b7280">You received a new contact request.</div>
-      </td></tr></table>
-      <table role="presentation" width="100%" class="card" style="background:#ffffff;border:none;border-radius:25px;box-shadow:0 4px 18px rgba(0,0,0,.06)"><tr><td style="padding:60px 72px;">
-        <table role="presentation" width="100%">
-          <tr><td style="padding-bottom:22px;">
-            <div class="label" style="font-size:15px;color:#181ad6;font-weight:400;text-transform:uppercase;letter-spacing:.6px">NAME</div>
-            <div class="value" style="font-size:18px;color:#111827;font-weight:600;margin-top:6px">${safeName}</div>
-          </td></tr>
-          <tr><td style="padding-bottom:22px;">
-            <div class="label" style="font-size:15px;color:#181ad6;font-weight:400;text-transform:uppercase;letter-spacing:.6px">EMAIL</div>
-            <div class="value" style="font-size:18px;color:#111827;margin-top:6px">
-              <a href="mailto:${safeEmail}" style="color:#808080;text-decoration:underline">${safeEmail}</a>
-            </div>
-          </td></tr>
-          <tr><td>
-            <div class="label" style="font-size:15px;color:#181ad6;font-weight:400;text-transform:uppercase;letter-spacing:.6px">MESSAGE</div>
-            <div class="value" style="font-size:18px;color:#111827;line-height:1.6;margin-top:6px">${safeMsg}</div>
-          </td></tr>
-        </table>
-        <table role="presentation" width="100%" align="center" style="margin-top:44px;text-align:center">
-          <tr><td align="center">
-            <a href="mailto:${safeEmail}" style="display:inline-block;background:#d7ff88;color:#000;text-decoration:none;padding:14px 28px;border-radius:12px;font-weight:700;font-size:14px">Reply to ${safeName}</a>
-          </td></tr>
-        </table>
-      </td></tr></table>
-      <table role="presentation" width="100%" style="margin-top:30px"><tr><td class="footer" style="font-size:13px;color:#6b7280;text-align:center;line-height:1.5">
-        Sent from <strong>Portfolio Zoe</strong>.<br/>If you didn’t expect this, you can safely ignore this email.
-      </td></tr></table>
-    </td></tr>
-  </table>
-</td></tr></table>
+  const html = `<!doctype html><html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>New message from ${safeName}</title></head>
+<body style="background:#f5f7fb;padding:40px;font-family:Inter,system-ui,Arial,sans-serif">
+  <h2 style="margin:0 0 8px">📬 New message from your portfolio</h2>
+  <p style="margin:0 0 24px;color:#6b7280">You received a new contact request.</p>
+  <div style="background:#fff;border-radius:16px;padding:24px;box-shadow:0 4px 18px rgba(0,0,0,.06)">
+    <div style="margin-bottom:16px"><strong>Name:</strong> ${safeName}</div>
+    <div style="margin-bottom:16px"><strong>Email:</strong> <a href="mailto:${safeEmail}">${safeEmail}</a></div>
+    <div><strong>Message:</strong><br/>${safeMsg}</div>
+  </div>
+  <p style="color:#6b7280;margin-top:18px">Sent from <strong>Portfolio Zoe</strong>.</p>
 </body></html>`;
   return { html, text: renderText({ name: safeName, email: safeEmail, message }) };
 }
 
-/* ------------- SMTP config ------------- */
+/* ----------------- config env ----------------- */
 const {
+  RESEND_API_KEY,
+  RESEND_FROM = 'Portfolio Zoe <onboarding@resend.dev>',
+  MAIL_TO, // si vide => fallback GMAIL_USER
   GMAIL_USER,
   GMAIL_APP_PASSWORD,
   MAIL_FROM_NAME = "Portfolio Zoe",
-  MAIL_TO = GMAIL_USER,
 } = process.env;
 
-if (!GMAIL_USER || !GMAIL_APP_PASSWORD) {
-  console.error("❌ SMTP config manquante: GMAIL_USER / GMAIL_APP_PASSWORD");
-  process.exit(1);
+const USE_RESEND = !!RESEND_API_KEY;
+
+/* ----------------- transports ----------------- */
+let gmailTransport = null;
+if (!USE_RESEND) {
+  if (!GMAIL_USER || !GMAIL_APP_PASSWORD) {
+    console.warn("⚠️  RESEND_API_KEY absent et SMTP Gmail incomplet ⇒ l'envoi échouera.");
+  } else {
+    gmailTransport = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
+      auth: { user: GMAIL_USER, pass: GMAIL_APP_PASSWORD },
+    });
+    gmailTransport.verify().then(
+      () => console.log("✅ SMTP Gmail prêt"),
+      (e) => console.error("❌ SMTP Gmail KO:", e?.message || e)
+    );
+  }
 }
 
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
-  auth: { user: GMAIL_USER, pass: GMAIL_APP_PASSWORD },
-});
-transporter.verify().then(
-  () => console.log("✅ SMTP Gmail prêt"),
-  (e) => console.error("❌ SMTP Gmail KO:", e?.message || e)
-);
+/* ----------------- helpers d'envoi ----------------- */
+async function sendWithResend({ to, subject, html, text, replyTo }) {
+  // Node 18+ a fetch global; Render utilise Node 22 → OK
+  const r = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${RESEND_API_KEY}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      from: RESEND_FROM, // ex: 'Portfolio Zoe <onboarding@resend.dev>'
+      to: Array.isArray(to) ? to : [to],
+      subject,
+      html,
+      text,
+      reply_to: replyTo?.address ? `${replyTo.name ?? ""} <${replyTo.address}>` : undefined,
+    }),
+  });
+  const data = await r.json().catch(() => ({}));
+  if (!r.ok) {
+    const msg = data?.message || data?.error || `Resend HTTP ${r.status}`;
+    throw new Error(msg);
+  }
+  return data; // { id: '...' }
+}
 
-/* ------------- middlewares ------------- */
+async function sendWithGmail({ to, subject, html, text, replyTo }) {
+  if (!gmailTransport) throw new Error("SMTP Gmail not configured");
+  return gmailTransport.sendMail({
+    from: `"${MAIL_FROM_NAME}" <${GMAIL_USER}>`,
+    to,
+    subject,
+    text,
+    html,
+    replyTo,
+    headers: { "X-Source": "portfolio-contact" },
+  });
+}
+
+async function sendEmail(payload) {
+  if (USE_RESEND) return sendWithResend(payload);
+  return sendWithGmail(payload);
+}
+
+/* ----------------- middlewares ----------------- */
 const limiter = rateLimit({
   windowMs: 5 * 60 * 1000,
   max: 5,
   standardHeaders: true,
   legacyHeaders: false,
 });
+
 const ContactSchema = z.object({
   name: z.string().min(1).max(100).trim(),
   email: z.string().email().max(200).trim(),
@@ -131,43 +138,31 @@ const ContactSchema = z.object({
   t: z.number().optional(),
 });
 
-/* ------------- routes ------------- */
+/* ----------------- routes ----------------- */
 router.post("/", limiter, async (req, res) => {
-  if (req.body?.website) return res.status(200).json({ success: true }); // honeypot
+  // honeypot + anti-bot simple
+  if (req.body?.website) return res.status(200).json({ success: true });
   const startTs = Number(req.body?.t || 0);
-  if (startTs && Date.now() - startTs < 800) { // UX: 0.8s
-    return res.status(429).json({ error: "Too fast" });
-  }
+  if (startTs && Date.now() - startTs < 800) return res.status(429).json({ error: "Too fast" });
 
   const parsed = ContactSchema.safeParse({ ...req.body, t: startTs || undefined });
   if (!parsed.success) return res.status(400).json({ error: parsed.error.flatten() });
 
   const { name, email, message } = parsed.data;
-  const subject = `New message from ${name}`;
   const { html, text } = renderEmail({ name, email, message });
 
   try {
-    const info = await transporter.sendMail({
-      from: `"${MAIL_FROM_NAME}" <${GMAIL_USER}>`,
-      to: MAIL_TO,
-      subject,
-      text,
+    const info = await sendEmail({
+      to: MAIL_TO || GMAIL_USER,
+      subject: `New message from ${name}`,
       html,
+      text,
       replyTo: { name, address: email },
-      headers: {
-        "X-Source": "portfolio-contact",
-        "X-Visitor-Email": email,
-      },
     });
 
-    console.log("✅ Email envoyé:", {
-      id: info?.messageId,
-      accepted: info?.accepted,
-      response: info?.response,
-    });
+    console.log("✅ Email envoyé:", info);
     return res.status(200).json({ success: true });
   } catch (err) {
-    // Log complet + retourne le message pour debug (retire si tu veux)
     console.error("❌ Envoi échoué:", err);
     return res.status(502).json({ error: err?.message || "Failed to send email" });
   }
@@ -175,13 +170,18 @@ router.post("/", limiter, async (req, res) => {
 
 router.get("/selftest", async (_req, res) => {
   try {
-    const info = await transporter.sendMail({
-      from: `"${MAIL_FROM_NAME}" <${GMAIL_USER}>`,
-      to: MAIL_TO,
-      subject: `Self-test portfolio #${Date.now()}`,
-      text: "If you see this, SMTP works.",
+    const { html, text } = renderEmail({
+      name: "SelfTest",
+      email: "no-reply@example.com",
+      message: "If you see this, email works.",
     });
-    res.json({ ok: true, id: info.messageId });
+    const info = await sendEmail({
+      to: MAIL_TO || GMAIL_USER,
+      subject: `Self-test portfolio #${Date.now()}`,
+      html,
+      text,
+    });
+    res.json({ ok: true, info });
   } catch (e) {
     res.status(500).json({ ok: false, error: e?.message || String(e) });
   }
