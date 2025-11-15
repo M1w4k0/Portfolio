@@ -24,6 +24,9 @@ origin: (origin, cb) => {
 
 app.use(express.json({ limit: "64kb" }));
 
+app.get("/", (_req, res) => res.send("OK - Portfolio API"));
+app.get("/healthz", (_req, res) => res.json({ ok: true }));
+
 app.get("/api/ping", (_req, res) => res.json({ message: "pong 🏓" }));
 app.use("/api/contact", contactRoutes);
 
