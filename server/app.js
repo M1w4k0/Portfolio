@@ -8,8 +8,9 @@ const contactRoutes = require("./routes/contactRoutes");
 // CORS: autorise local + origines de prod (liste via ALLOWED_ORIGIN, séparée par virgules)
 const ALLOWED = ["http://localhost:3000", "http://localhost:5173", "https://portfolio-officiel-sable.vercel.app",];
 
-app.use(cors({ origin: ALLOWED }));
-app.options("*", cors({ origin: ALLOWED }));
+app.use(cors({ origin: ALLOWED, methods: ["POST", "GET", "OPTIONS"],
+    allowedHeaders: ["Content-Type"],}));
+
 
 app.use(express.json({ limit: "64kb" }));
 
