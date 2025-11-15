@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./ContactSection.css";
 import { Mail, Linkedin } from "lucide-react";
 import DotGrid from "../../Components/BackDot/BackDot";
-import { getApiBase } from "../../lib/apiBase";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "", website: "" });
@@ -11,8 +10,6 @@ export default function ContactSection() {
 
   useEffect(() => setStartTs(Date.now()), []);
 
-  const API = getApiBase();
-  console.log("API base =", API);
 
   const handleChange = (e) =>
     setFormData((f) => ({ ...f, [e.target.name]: e.target.value }));
@@ -21,7 +18,7 @@ export default function ContactSection() {
     e.preventDefault();
     setStatus("sending");
     try {
-      const res = await fetch(`${API}/api/contact`, {
+      const res = await fetch(`https://portfolio-blu2.onrender.com/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...formData, t: startTs }),
