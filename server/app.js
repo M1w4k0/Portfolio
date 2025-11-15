@@ -6,23 +6,10 @@ const app = express();
 const contactRoutes = require("./routes/contactRoutes");
 
 // CORS: autorise local + origines de prod (liste via ALLOWED_ORIGIN, séparée par virgules)
-const ORIGINS = (process.env.ALLOWED_ORIGIN || "")
-  .split(",")
-  .map((s) => s.trim())
-  .filter(Boolean);
+const ALLOWED = ["http://localhost:3000", "http://localhost:5173", "https://portfolio-officiel-sable.vercel.app",];
 
-const ALLOWED = ["http://localhost:3000", "http://localhost:5173", ...ORIGINS];
-
-app.use(
-  cors({
-    origin: (origin, cb) => {
-      if (!origin || ALLOWED.includes(origin)) return cb(null, true); // autorise curl/healthchecks
-      return cb(new Error("CORS"));
-    },
-    methods: ["POST", "GET", "OPTIONS"],
-    allowedHeaders: ["Content-Type"],
-  })
-);
+app.use(cors({ origin: ALLOWED }));
+app.options("*", cors({ origin: ALLOWED }));
 
 app.use(express.json({ limit: "64kb" }));
 
