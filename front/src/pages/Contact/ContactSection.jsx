@@ -10,6 +10,8 @@ export default function ContactSection() {
 
   useEffect(() => setStartTs(Date.now()), []);
 
+  const API = import.meta.env.VITE_API_URL || ""; // en prod: https://<ton-back>.onrender.com
+
   const handleChange = (e) =>
     setFormData((f) => ({ ...f, [e.target.name]: e.target.value }));
 
@@ -17,12 +19,16 @@ export default function ContactSection() {
     e.preventDefault();
     setStatus("sending");
     try {
-      const res = await fetch("https://portfolio-blu2.onrender.com/api/contact", {
+      const res = await fetch(`${API}/api/contact`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...formData, t: startTs }),
       });
-      if (!res.ok) throw new Error(await res.text());
+      if (!res.ok) {
+        let msg = "Error";
+        try { const j = await res.json(); msg = j.error || JSON.stringify(j); } catch {}
+        throw new Error(msg);
+      }
       setStatus("success");
       setFormData({ name: "", email: "", message: "", website: "" });
       setStartTs(Date.now());
@@ -49,7 +55,6 @@ export default function ContactSection() {
         />
       </div>
 
-
       <div className="connect-section" id="contact">
         <div className="connect-container">
           <p className="availability">- Available to work -</p>
@@ -64,6 +69,7 @@ export default function ContactSection() {
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit} autoComplete="off">
+          {/* honeypot */}
           <input
             type="text"
             name="website"
@@ -104,16 +110,10 @@ export default function ContactSection() {
           />
 
           <button type="submit" className="contactbtn">
-            {status === "sending"
-              ? "Sending..."
-              : status === "success"
-              ? "Sent!"
-              : "Send"}
+            {status === "sending" ? "Sending..." : status === "success" ? "Sent!" : "Send"}
           </button>
 
-          {status === "error" && (
-            <p className="error-msg">❌ Error — please try again later.</p>
-          )}
+          {status === "error" && <p className="error-msg">❌ Error — please try again later.</p>}
         </form>
       </div>
 
@@ -131,7 +131,7 @@ export default function ContactSection() {
             <a href="mailto:zm.charrier@gmail.com" aria-label="Email">
               <Mail size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" rel="noreferrer">
               <Linkedin size={20} />
             </a>
           </div>
