@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./ContactSection.css";
 import { Mail, Linkedin } from "lucide-react";
 import DotGrid from "../../Components/BackDot/BackDot";
+import { getApiBase } from "../../lib/apiBase";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "", website: "" });
@@ -10,7 +11,7 @@ export default function ContactSection() {
 
   useEffect(() => setStartTs(Date.now()), []);
 
-  const API = import.meta.env.VITE_API_URL || "https://portfolio-blu2.onrender.com";
+  const API = getApiBase();
   console.log("API base =", API);
 
   const handleChange = (e) =>
