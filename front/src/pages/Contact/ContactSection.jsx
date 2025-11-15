@@ -10,7 +10,8 @@ export default function ContactSection() {
 
   useEffect(() => setStartTs(Date.now()), []);
 
-  const API = import.meta.env.VITE_API_URL || ""; // en prod: https://<ton-back>.onrender.com
+  const API = import.meta.env.VITE_API_URL || "https://portfolio-blu2.onrender.com";
+  console.log("API base =", API);
 
   const handleChange = (e) =>
     setFormData((f) => ({ ...f, [e.target.name]: e.target.value }));
