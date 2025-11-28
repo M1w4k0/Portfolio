@@ -1,27 +1,22 @@
+
+import React from "react";
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+import { BrowserRouter } from "react-router-dom";
 import './index.css'
 import App from './App.jsx'
+import './App.css';
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+
+createRoot(document.getElementById("root")).render(
+    <div className="home-section">
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+    </div>
+);
 
 let scrollSpeed = 0;
 let currentScroll = 0;
 
-// window.addEventListener('wheel', (e) => {
-//   e.preventDefault();
-//   scrollSpeed += e.deltaY * 0.8;
-// }, { passive: false });
-
-// function smoothScroll() {
-//   currentScroll += (scrollSpeed - currentScroll);
-//   window.scrollTo(0, currentScroll);
-//   requestAnimationFrame(smoothScroll);
-// }
-
-// smoothScroll();
 

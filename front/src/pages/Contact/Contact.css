@@ -1,0 +1,385 @@
+.contact-section {
+  background: #ffffff;
+  color: #111111;
+  padding: 5% 0%;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 15rem;
+
+}
+
+.contact-container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.3fr);
+  column-gap: 5rem;
+  align-items: flex-start;
+}
+
+/* ===================== */
+/*      COLONNE GAUCHE   */
+/* ===================== */
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2.5rem, 5vh, 3.5rem);
+}
+
+.contact-title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 5rem;
+  line-height: 0.95;
+  letter-spacing: 0.02em;
+  width: 80%;
+}
+
+.cc-case__num {
+  position: absolute;
+  top: 15vh;
+  left: clamp(16px, 3vw, 40px);
+  font-size: clamp(12px, 1.2vw, 16px);
+  letter-spacing: 0.12em;
+  opacity: 0.9;
+}
+
+.contact-title-quote {
+  display: inline-block;
+}
+
+.contact-left-body {
+  position: relative;
+  padding-left: 1.8rem;
+}
+
+/* petit point à gauche */
+.contact-left-body::before {
+  content: "";
+  position: absolute;
+  left: 0.2rem;
+  top: 0.6rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #111111;
+}
+
+.contact-lead {
+  margin: 0 0 1.2rem;
+  font-size: 0.98rem;
+}
+
+.contact-text {
+  margin: 0 0 0.6rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  max-width: 28rem;
+}
+
+/* ===================== */
+/*      COLONNE DROITE   */
+/* ===================== */
+
+.contact-right {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 560px;
+}
+
+.contact-row {
+  width: 100%;
+  margin-bottom: 1.6rem;
+}
+
+.contact-row-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 2.5rem;
+}
+
+.contact-field {
+  width: 100%;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0.75rem 0;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: transparent;
+  outline: none;
+  color: #111111;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: #b3b3b3;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  border-bottom-color: #5227ff;
+}
+
+.contact-field textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* petite erreur API */
+.contact-error {
+  margin: 0.4rem 0 0.2rem;
+  font-size: 0.85rem;
+  color: #c53838;
+}
+
+/* bouton */
+
+.contact-row-action {
+  margin-top: 1.5rem;
+}
+
+.ctct {
+  display: inline-block;
+  padding: 0.9rem 2.4rem;
+  border: none;
+  border-radius: 0;
+  background: #111111;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, opacity 0.15s ease;
+}
+
+.ctct:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #000000;
+}
+
+.ctct:active:not(:disabled) {
+  transform: translateY(0);
+  opacity: 0.9;
+}
+
+.ctct:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
+
+/* ============================ */
+/*         SECTION RULES        */
+/* ============================ */
+
+.rules-section {
+  background: #f6f6f6;
+  color: #111111;
+  padding: clamp(5rem, 12vh, 7rem) clamp(2.5rem, 7vw, 5rem);
+}
+
+.rules-inner {
+  width: min(1400px, 100%);
+  margin: 0 auto;
+}
+
+/* Titre en haut à gauche */
+.rules-header {
+  margin-bottom: clamp(4.5rem, 10vh, 6rem);
+}
+
+.rules-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(3rem, 5.2vw, 4.5rem);
+  line-height: 0.9;
+}
+
+.rules-sub {
+  margin: 0.6rem 0 0;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* grille des 3 règles */
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: clamp(3rem, 5vw, 5.5rem);
+}
+
+/* cartes */
+
+.rule-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.rule-number {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.rule-title {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.rule-subtitle {
+  margin: 0 0 0.8rem;
+  font-size: 1rem;
+}
+
+.rule-divider {
+  width: 100%;
+  height: 1px;
+  background: #d6d6d6;
+  margin-bottom: 1.1rem;
+}
+
+.rule-text {
+  margin: 0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+/* ========================= */
+/*        TABLETTE ≤1024     */
+/* ========================= */
+
+@media (max-width: 1024px) {
+  .contact-container {
+    grid-template-columns: 1.1fr 1fr;
+    column-gap: clamp(28px, 5vw, 60px);
+  }
+
+  .contact-title {
+    font-size: clamp(2.3rem, 4vw, 3.2rem);
+  }
+
+  .contact-form {
+    max-width: 520px;
+  }
+
+  .rules-grid {
+    column-gap: clamp(2rem, 4vw, 3.5rem);
+  }
+
+  .rule-title {
+    font-size: 1.6rem;
+  }
+}
+
+/* ========================= */
+/*       MOBILE ≤768         */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: clamp(3rem, 10vh, 4rem) clamp(1.5rem, 6vw, 2.2rem);
+    height: auto;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+
+  .contact-left {
+    max-width: 34rem;
+  }
+
+  .contact-title {
+    font-size: clamp(2rem, 7vw, 2.6rem);
+    
+  }
+
+  .contact-left-body {
+    padding-left: 1.5rem;
+  }
+
+  .contact-form {
+    max-width: 100%;
+  }
+
+  .contact-row-two {
+    grid-template-columns: 1fr;
+    row-gap: 1.4rem;
+  }
+
+  .rules-section {
+    padding: clamp(3rem, 9vh, 4rem) clamp(1.6rem, 6vw, 2.4rem);
+  }
+
+  .rules-title {
+    font-size: clamp(2.3rem, 6vw, 3rem);
+  }
+
+  .rules-grid {
+    grid-template-columns: 1fr;
+    row-gap: 2.8rem;
+  }
+}
+
+/* ========================= */
+/*      MOBILE XS ≤480       */
+/* ========================= */
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding-inline: 1.2rem;
+  }
+
+  .contact-title {
+    font-size: 3rem;
+    margin-top: 20%;
+
+  }
+
+  .contact-text {
+    font-size: 0.94rem;
+  }
+
+  .contact-field input,
+  .contact-field textarea {
+    font-size: 0.9rem;
+  }
+
+  .ctct {
+    width: 100%;
+    text-align: center;
+  }
+
+  .rules-title {
+    font-size: 3rem;
+  }
+
+  .rules-header {
+    padding-bottom: 0rem;
+    margin-bottom: 4rem;
+  }
+
+  .rule-text {
+    font-size: 0.94rem;
+  }
+}
+
+/* Accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .ctct {
+    transition: none;
+  }
+}

@@ -2,14 +2,12 @@
   padding: 1rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   justify-content: center;
-  position: fixed; 
+  position: fixed;
   z-index: 1000;
   width: 100%;
   color: white;
 }
-
 
 .barretransparente {
   list-style: none;
@@ -22,28 +20,20 @@
   background-color: rgba(46, 46, 46, 0.7);
   width: 40%;
   transition: width 0.3s ease;
-
 }
 
 .barretransparente:hover {
-  width: 45%; 
+  width: 45%;
 }
-
 
 .navbar li:hover {
-   color: #ccbee6;
-   cursor: pointer; 
+  color: #ccbee6;
+  cursor: pointer;
 }
 
-.projects-link{
+.projects-link {
   color: #000000;
   text-decoration: none;
-}
-
-
-.navbar a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .navbar a {
@@ -54,9 +44,7 @@
 .navbar a:hover {
   color: #ccbee6;
   cursor: pointer;
-
 }
-
 
 .contact-button {
   background-color: #d7ff88;
@@ -70,85 +58,13 @@
 }
 
 .contact-button:hover {
-  background-color: rgba(215, 255, 136, 0.5);;
+  background-color: rgba(215, 255, 136, 0.5);
   cursor: pointer;
 }
 
 .nav-item {
   position: relative;
 }
-
-/* .dropdown-trigger {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-} */
-
-/* .arrow {
-  width: 12px;
-  height: 12px;
-  transition: transform 0.3s ease;
-}
-
-.nav-item:hover .arrow {
-  transform: rotate(180deg);
-} */
-
-/* .dropdown-panel {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  padding: 1.5rem;
-  border-radius: 16px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-  display: flex;
-  gap: 2rem;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.3s ease;
-  z-index: 1000;
-  min-width: 500px;
-  pointer-events: none;
-} */
-
-/* .nav-item:hover .dropdown-panel {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.dropdown-column {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.dropdown-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0.75rem;
-  border-radius: 12px;
-  transition: background 0.1s ease;
-}
-
-.dropdown-item.clickable {
-  cursor: pointer;
-}
-
-.dropdown-item.clickable:hover {
-  background-color: #e9ffbd;
-}
-
-.dropdown-item p {
-  margin: 0;
-  font-size: 0.875rem;
-  color: #666;
-} */
 
 .icon {
   width: 32px;
@@ -168,5 +84,82 @@
   100% {
     opacity: 1;
     transform: scale(0.9) translateY(0);
+  }
+}
+
+/* --------------------------- */
+/*        TABLETTE ≤1024px     */
+/* --------------------------- */
+
+@media (max-width: 1024px) {
+  .barretransparente {
+    gap: 2rem;
+    width: 55%;
+  }
+
+  .contact-button {
+    padding: 0.45rem 1rem;
+  }
+}
+
+/* --------------------------- */
+/*        MOBILE LARGE ≤768px  */
+/* --------------------------- */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 0.65rem 0.8rem;
+    backdrop-filter: blur(12px);
+  }
+
+  .barretransparente {
+    gap: 1.4rem;
+    width: min(94%, 580px);
+    padding: 8px 12px;
+  }
+
+  /* on évite que ça « gonfle » au hover sur mobile */
+  .barretransparente:hover {
+    width: min(94%, 580px);
+  }
+
+  .barretransparente li {
+    font-size: 0.9rem;
+  }
+
+  .contact-button {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* --------------------------- */
+/*          MOBILE XS ≤480px   */
+/* --------------------------- */
+
+@media (max-width: 480px) {
+
+  .barretransparente {
+    gap: 0.9rem;
+    width: min(96%, 420px);
+    padding: 8px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .barretransparente:hover {
+    width: min(96%, 420px);
+  }
+
+  .barretransparente li {
+    font-size: 0.8rem;
+  }
+
+  /* le bouton devient plus compact, mais reste visible */
+  .contact-button {
+    padding: 0.35rem 0.9rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
   }
 }

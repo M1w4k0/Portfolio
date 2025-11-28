@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink } from "react-router-dom";
 import './Navbar.css';
 
 export default function Navbar() {
@@ -8,12 +9,12 @@ export default function Navbar() {
     <nav className="navbar">
       <div className='vide'></div>
       <ul className='barretransparente'>
-        <li><a href="#home">Home</a></li>
+        <li><NavLink to="/">Home</NavLink></li>
         <li className="nav-item dropdown">
-          <a href="#experiences"><span className="dropdown-trigger">
+          <NavLink to="/experience"><span className="dropdown-trigger">
             Experiences
             {/* <img src="./assets/flechebas.png" className="arrow" alt="arrow" /> */}
-          </span></a>
+          </span></NavLink>
           {/* <div className="dropdown-panel">
             <div className="dropdown-column">
               <div className="dropdown-item clickable">
@@ -51,10 +52,10 @@ export default function Navbar() {
         </li>
 
         <li className="nav-item dropdown">
-          <a href="#projects"><span className="dropdown-trigger">
+          <NavLink to="/projects"><span className="dropdown-trigger">
             Projects
             {/* <img src="./assets/flechebas.png" className="arrow" alt="arrow" /> */}
-          </span></a>
+          </span></NavLink>
           {/* <div className="dropdown-panel">
             <div className="dropdown-column">
               <div className="dropdown-item clickable">
@@ -76,10 +77,10 @@ export default function Navbar() {
         </li>
 
         <li className="nav-item dropdown">
-          <a href="#skills"><span className="dropdown-trigger">
+          <NavLink to="/skills"> <span className="dropdown-trigger">
             Skills
             {/* <img src="./assets/flechebas.png" className="arrow" alt="arrow" /> */}
-          </span></a>
+          </span></NavLink>
           {/* <div className="dropdown-panel">
             <div className="dropdown-column">
               <div className="dropdown-item clickable">
@@ -100,8 +101,7 @@ export default function Navbar() {
           </div> */}
         </li>
 
-        <li><a href="#about">About</a></li>
-        <a href="#contact"><button className="contact-button">Get in touch</button></a>
+        <NavLink to="/contact"><button className="contact-button">Get in touch</button></NavLink>
 
       </ul>
     </nav>

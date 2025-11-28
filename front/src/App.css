@@ -1,1 +1,13 @@
 
+
+
+.home-section{
+    background-color: rgb(255, 255, 255);
+    margin:0;
+}
+
+.home-section ::selection {
+  background: #d7ff88 !important;
+  transition: color 0.25s ease;
+   color: black; 
+}

@@ -1,19 +1,116 @@
-/* === CSS À COLLER DANS TON FICHIER CSS === */
-/* Namespace strict pour éviter toute collision */
+/* ========================= */
+/*        SECTION READY      */
+/* ========================= */
+
+.ready {
+  position: relative;
+  min-height: 100vh;
+  background: #0e0620;
+  color: #ffffff;
+  padding: 6vh 6vw 6vh;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+
+/* Gros titre à gauche */
+.ready__header {
+  margin-top: 8vh;
+  margin-left: 4vw;
+}
+
+.ready__title {
+  margin-right:2px;
+  margin-top: 10%;
+  grid-column: 1 / 2;
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  font-size: 5.5rem;
+  width: 100%;
+}
+
+
+/* Liste “éparpillée” au centre */
+.ready__items {
+  position: relative;
+  margin-top: 12vh;
+  margin-left: 15vw;
+}
+
+/* Chaque ligne + accolade */
+.ready__item {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  font-size: 14px;
+  max-width: 360px;
+}
+
+/* décalages progressifs pour imiter le visuel */
+.ready__item--1 {
+  margin-left: 6vw;
+}
+.ready__item--2 {
+  margin-top: 5vh;
+  margin-left: 12vw;
+}
+.ready__item--3 {
+  margin-top: 5vh;
+  margin-left: 20vw;
+}
+.ready__item--4 {
+  margin-top: 5vh;
+  margin-left: 30vw;
+}
+
+.ready__brace {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+/* Texte de chaque “signe” */
+.ready__text {
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Mot vertical à droite */
+.ready__sideword {
+  position: absolute;
+  right: -13px;
+  bottom: 65vh;
+  transform: rotate(-90deg);
+  transform-origin: bottom right;
+  font-size: 5.3rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+/* ========================= */
+/*      PROJECTS / SLICE     */
+/* ========================= */
+
+.projects {
+  background: #ffffff;
+}
+
+/* bloc image + texte */
 .cc-slice {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
   gap: clamp(24px, 8vw, 140px);
   padding: 0;
-  min-height: 800px;          
+  min-height: 800px;
 }
 
 .cc-slice-media {
   width: 100%;
   max-width: 880px;
   height: min(60vh, 540px);
-  overflow: hidden;             /* masque l’image au bords arrondis */
+  overflow: hidden;
 }
 
 .cc-slice-img {
@@ -21,7 +118,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  filter: grayscale(100%);      /* comme sur ta capture */
+  filter: grayscale(100%);
 }
 
 .cc-slice-copy {
@@ -31,9 +128,9 @@
 
 .cc-slice-title {
   margin: 0 0 0.75rem 0;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.05;
-  font-size: clamp(28px, 4vw, 56px);
+  font-size: clamp(24px, 3vw, 48px);
 }
 
 .cc-slice-text {
@@ -43,19 +140,220 @@
   opacity: 0.95;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
+/* ========================= */
+/*      SKILLS TEST BLOCK    */
+/* ========================= */
+
+.skills-test {
+  background: #0e0620;
+  color: #ffffff;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.skills-big {
+  font-size: clamp(4rem, 10vw, 12rem);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  margin-top: 20vh;
+  text-transform: uppercase;
+  font-family: "DidotCustom";
+}
+
+.skills-sub {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+.skills-questions {
+  text-align: center;
+  font-size: clamp(0.9rem, 1.4vw, 1.4rem);
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.25));
+}
+
+.skills-questions p {
+  margin: 0.4rem 0;
+  opacity: 0.85;
+}
+
+/* ========================= */
+/*       TABLETTE ≤1024      */
+/* ========================= */
+
+@media (max-width: 1024px) {
+  .ready {
+    padding: 8vh 5vw 8vh;
+  }
+
+  .ready__header {
+    margin-left: 0;
+  }
+
+  .ready__items {
+    margin-left: 8vw;
+    margin-top: 9vh;
+  }
+
+  .ready__sideword {
+    right: -20px;
+    bottom: 12vh;
+    font-size: clamp(3.2rem, 6vw, 4rem);
+  }
+
+  .cc-slice {
+    gap: clamp(20px, 6vw, 80px);
+    padding: 0 clamp(24px, 6vw, 40px);
+    min-height: 620px;
+  }
+
+  .cc-slice-media {
+    height: min(50vh, 420px);
+  }
+
+  .skills-big {
+    margin-top: 18vh;
+  }
+}
+
+/* ========================= */
+/*       MOBILE ≤768         */
+/* ========================= */
+
+@media (max-width: 768px) {
+  /* READY SECTION */
+  .ready {
+    min-height: auto;
+    padding: clamp(80px, 16vh, 110px) clamp(1.6rem, 6vw, 2.2rem) clamp(64px, 12vh, 80px);
+    font-weight: 400;
+
+  }
+
+  .ready__header {
+    margin-top: 0;
+  }
+
+  .ready__title {
+    font-size: clamp(2.1rem, 7vw, 2.8rem);
+    margin-top: 3.4rem;
+    line-height: 1.02;
+  }
+
+  .ready__items {
+    margin-top: 2.5rem;
+    margin-left: 0;
+  }
+
+  .ready__item {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  /* on neutralise les décalages en mobile */
+  .ready__item,
+  .ready__item--1,
+  .ready__item--2,
+  .ready__item--3,
+  .ready__item--4,
+  .ready__item--5 {
+    margin-left: 0;
+    margin-top: 1.1rem;
+  }
+
+  .ready__brace {
+    font-size: 1.3rem;
+  }
+
+  .ready__sideword {
+    position: static;
+    transform: none;
+    margin-top: 3rem;
+    font-size: clamp(1.6rem, 5.5vw, 2.2rem);
+    text-align: left;
+  }
+
+  /* PROJECTS / SLICE */
   .cc-slice {
     grid-template-columns: 1fr;
     gap: clamp(16px, 6vw, 32px);
-    padding: 0 clamp(12px, 5vw, 32px);
+    padding: 3rem clamp(1.6rem, 6vw, 2.2rem);
     min-height: auto;
   }
+
   .cc-slice-media {
-    height: min(48vh, 380px);
+    height: min(45vh, 320px);
     max-width: none;
   }
+
   .cc-slice-copy {
     max-width: 48ch;
+  }
+
+  .cc-slice-title {
+    font-size: clamp(1.5rem, 5.5vw, 2.1rem);
+  }
+
+  .cc-slice-text {
+    font-size: 0.98rem;
+  }
+
+  /* SKILLS */
+  .skills-test {
+    height: auto;
+    padding: clamp(72px, 16vh, 96px) clamp(1.6rem, 6vw, 2.2rem) 4rem;
+  }
+
+  .skills-big {
+    margin-top: 0;
+    font-size: clamp(3rem, 9vw, 4.2rem);
+    text-align: center;
+  }
+
+  .skills-sub {
+    font-size: 0.9rem;
+  }
+
+  .skills-questions {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ========================= */
+/*      MOBILE XS ≤600       */
+/* ========================= */
+
+@media (max-width: 600px) {
+  .ready {
+    padding-top: 13vh;
+    padding-bottom: 0;
+  }
+
+  .ready__title {
+    font-size: 3.8rem;
+  }
+
+  .ready__item {
+    font-size: 0.9rem;
+  }
+
+  .cc-slice {
+    padding-top: 2.5rem;
+  }
+
+  .skills-big {
+    font-size: clamp(3.3rem, 9vw, 3.5rem);
+  }
+
+  .skills-questions p {
+    margin: 0.3rem 0;
   }
 }

@@ -1,13 +1,19 @@
 import React from "react";
 import "./Intro.css";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Character from '../../Components/BlurText/Character';
+
+const paragraph = "For me, it’s all about coding with purpose, thinking like a product designer, and creating real, meaningful value."
+
 
 export default function Intro() {
 
+const words = paragraph.split(" ")
 
   return (
     <>
     <section className="intro-section" data-theme="dark">
+      
       <div className="home-content">
         <div className="hero-tags">
           <div className="tag tag-role">
@@ -35,9 +41,8 @@ export default function Intro() {
     </section>
     <section className="scroll-section">
        <p className="subtitle">My vision</p>
-        <p className="scroll-text">
-          For me, it’s all about coding with purpose, thinking like a product designer, and creating real, meaningful value.
-        </p>
+       <div className='catchphrase'><Character paragraph={paragraph}/></div>
+          
       </section>
     </>
   );

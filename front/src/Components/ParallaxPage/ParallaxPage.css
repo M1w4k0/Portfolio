@@ -1,17 +1,29 @@
+.cc-par-page {
+  min-height: 100%;
+  background: var(--page-bg, #ffffff);
+  color: var(--page-fg, #111);
+}
 
-.cc-par-page { min-height: 100%; background: var(--page-bg, #ffffff); color: var(--page-fg, #111); }
-.cc-par-spacer { height: 0vh; }
-.cc-par-outro { height: 20vh; }
+.cc-par-spacer {
+  height: 0vh;
+}
+.cc-par-outro {
+  height: 0vh;
+}
+
+/* ========================= */
+/*        SECTIONS BG        */
+/* ========================= */
 
 .cc-par-section {
   position: relative;
   height: 100vh;
-  overflow: hidden; 
+  overflow: hidden;
   display: grid;
   place-items: center;
 }
 
-/* Textes sur fonds  */
+/* Texte sur fond */
 .cc-par-text {
   position: relative;
   z-index: 2;
@@ -20,28 +32,28 @@
   padding: 0 4vw;
 }
 .cc-par-text h2 {
-  margin: 0 0 .6rem;
+  margin: 0 0 0.6rem;
   font-size: clamp(32px, 6vw, 56px);
   line-height: 1.06;
   font-weight: 800;
-  color:#fff;
+  color: #fff;
 }
 
 .cc-par-text p {
   margin: 0;
   font-size: 25px;
   line-height: 1.55;
-  opacity: .95;
-  color:#fff;
+  opacity: 0.95;
+  color: #fff;
 }
 
-/* Fonds fixe */
+/* Fonds fixes parallax */
 .cc-par-fixedBg {
-  position: fixed;  
-  top: -10vh;      
+  position: fixed;
+  top: -10vh;
   left: 0;
   width: 100vw;
-  height: 120vh;   
+  height: 120vh;
   z-index: 1;
   pointer-events: none;
 }
@@ -59,29 +71,29 @@
   display: block;
 }
 
-/* Descriptions encadrées */
+/* (Desc blocs inutilisés ici, je les laisse) */
 .cc-par-desc1 {
   justify-items: left;
-  margin: 140px 0;
+  margin: 200px 0;
   padding: 0 4vw;
 }
 
-.cc-par-desc1-h1{
- text-align: left;
+.cc-par-desc1-h1 {
+  text-align: left;
   max-width: 10vw;
   line-height: 1.2;
-  font-size: 50px;        
-  margin-bottom: 20px; 
-    color: #000000;   
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #000000;
 }
 
 .cc-par-desc1-text {
   text-align: left;
   max-width: 65vw;
   line-height: 1.2;
-  font-size: 30px;     
-  margin: 0;  
-    color: #000000;        
+  font-size: 30px;
+  margin: 0;
+  color: #000000;
 }
 
 .cc-par-desc1-text:first-of-type {
@@ -89,10 +101,204 @@
 }
 
 .cc-par-desc1-text + .cc-par-desc1-text {
-  margin-top: 30px;  
+  margin-top: 30px;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .cc-par-descText { max-width: 80vw; }
+/* ========================= */
+/*  BREAKTHROUGH QUOTE BLOCK */
+/* ========================= */
+
+.cc-par-quote {
+  position: relative;
+  background: #ffffff;
+  color: #1c1c1c;
+  padding: 7% 5%;
+  display: flex;
+  gap: 20%;
+}
+
+.dot {
+  width: 40%;
+}
+
+.cc-little {
+  color: #1c1c1c;
+  font-size: 19px;
+}
+
+.cc-par-quote-dot {
+  position: absolute;
+  left: 3%;
+  bottom: 16%;
+  width: 18px;
+  height: 18px;
+  background: #1c1c1c;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.cc-rightside {
+  display: flex;
+  flex-direction: column;
+  gap: 7%;
+  align-items: start;
+  padding: 0;
+}
+
+.cc-par-quote-top {
+  max-width: 55%;
+  text-align: left;
+  margin-top: 7%;
+  font-size: 20px;
+  line-height: 1.55;
+  color: #1f1f1f;
+}
+.cc-par-quote-link {
+  color: #111;
+  text-decoration: underline;
+}
+
+.cc-par-quote-title {
+  width: 90%;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 0.95;
+  font-size: 2.8rem;
+  color: #242424;
+}
+.cc-par-quote-title span {
+  display: block;
+}
+.cc-par-quote-title .muted {
+  color: #bdbdbd;
+}
+
+.cc-par-outro {
+  height: 20vh;
+}
+
+/* ========================= */
+/*       TABLETTE ≤1024      */
+/* ========================= */
+
+@media (max-width: 1024px) {
+  .cc-par-section {
+    height: 90vh;
+  }
+
+  .cc-par-text {
+    max-width: 65ch;
+    padding-inline: 6vw;
+  }
+
+  .cc-par-text p {
+    font-size: clamp(1.1rem, 2.4vw, 1.3rem);
+  }
+
+  .cc-par-quote {
+    padding: 6% 6%;
+    gap: 12%;
+  }
+
+  .cc-par-quote-top {
+    max-width: 65%;
+  }
+}
+
+/* ========================= */
+/*       MOBILE ≤768         */
+/* ========================= */
+
+@media (max-width: 768px) {
+  /* Parallax sections */
+  .cc-par-section {
+    height: 80vh;
+    padding-inline: clamp(1.5rem, 5vw, 2.2rem);
+  }
+
+  /* Pour éviter les comportements chelous du fixed sur mobile,
+     on limite le fond à la section */
+  .cc-par-fixedBg {
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+
+  .cc-par-text {
+    max-width: 100%;
+    padding-inline: 0;
+  }
+
+  .cc-par-text h2 {
+    font-size: clamp(rem, 7vw, 2.4rem);
+  }
+
+  .cc-par-text p {
+    font-size: clamp(0.98rem, 4vw, 1.15rem);
+    line-height: 1.6;
+  }
+
+  /* Breakthrough blocs */
+  .cc-par-quote {
+    padding: 3.5rem clamp(1.5rem, 6vw, 2.2rem);
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .dot {
+    width: 100%;
+    position: relative;
+  }
+
+  .cc-par-quote-dot {
+    position: static;
+    margin-bottom: 0.6rem;
+  }
+
+  .cc-little {
+    font-size: 0.95rem;
+  }
+
+  .cc-rightside {
+    gap: 1rem;
+  }
+
+  .cc-par-quote-title {
+    width: 100%;
+    font-size: clamp(1.6rem, 5.6vw, 2.1rem);
+    line-height: 1.1;
+  }
+
+  .cc-par-quote-top {
+    max-width: 100%;
+    margin-top: 0.5rem;
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+}
+
+/* ========================= */
+/*      MOBILE XS ≤600       */
+/* ========================= */
+
+@media (max-width: 600px) {
+  .cc-par-section {
+    height: 75vh;
+  }
+
+  .cc-par-text h2 {
+    font-size: clamp(2rem, 6.2vw, 2rem);
+  }
+
+  .cc-par-quote {
+    padding-block: 3rem;
+  }
+
+  .cc-par-quote-title {
+    font-size: clamp(1.5rem, 5.4vw, 1.9rem);
+  }
+
+  .cc-par-quote-top {
+    font-size: 0.95rem;
+  }
 }

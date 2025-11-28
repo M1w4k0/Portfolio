@@ -1,0 +1,132 @@
+.icon-btns {
+  display: grid;
+  grid-gap: 10em;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 5em;
+  overflow: visible;
+  width: 40%;
+}
+
+.icon-btn {
+  background-color: transparent;
+  outline: none;
+  position: relative;
+  width: 9em;
+  height: 9em;
+  perspective: 24em;
+  transform-style: preserve-3d;
+  -webkit-tap-highlight-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.icon-btn__back,
+.icon-btn__front,
+.icon-btn__label {
+  transition:
+    opacity 0.3s cubic-bezier(0.83, 0, 0.17, 1),
+    transform 0.3s cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.icon-btn__back,
+.icon-btn__front {
+  border-radius: 0.3em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.icon-btn__back {
+  box-shadow: 0.5em -0.5em 0.75em hsla(223, 10%, 10%, 0.15);
+  display: block;
+  transform: rotate(15deg);
+  transform-origin: 100% 100%;
+  will-change: transform;
+}
+
+.icon-btn__front {
+  background-color: hsla(0, 0%, 100%, 0.15);
+  box-shadow: 0 0 0 0.1em hsla(0, 0%, 100%, 0.3) inset;
+  backdrop-filter: blur(0.75em);
+  -webkit-backdrop-filter: blur(0.75em);
+  -moz-backdrop-filter: blur(0.75em);
+  display: flex;
+  transform-origin: 80% 50%;
+  will-change: transform;
+}
+
+.icon-btn__icon {
+  margin: auto;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn__label {
+  font-size: 1em;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 2;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+}
+
+.icon-btn:focus-visible .icon-btn__back,
+.icon-btn:hover .icon-btn__back {
+  transform: rotate(25deg) translate3d(-0.5em, -0.5em, 0.5em);
+}
+
+.icon-btn:focus-visible .icon-btn__front,
+.icon-btn:hover .icon-btn__front {
+  transform: translate3d(0, 0, 2em);
+}
+
+.icon-btn:focus-visible .icon-btn__label,
+.icon-btn:hover .icon-btn__label {
+  opacity: 1;
+  transform: translateY(20%);
+}
+
+
+/* 🟣 Responsive mobile */
+@media (max-width: 768px) {
+  .icon-btns {
+    width: 100%;
+    grid-gap: 2.5em;                 /* moins d’espace entre les boutons */
+    padding-top: 2.5em;
+    margin-right: 30px;
+  }
+
+  .icon-btn {
+    width: 6em;
+    height: 6em;
+  }
+
+  /* Sur mobile : label toujours visible sous l'icône */
+  .icon-btn__label {
+    position: static;
+    opacity: 1;
+    transform: none;
+    margin-top: 0.75em;
+    font-size: 0.9em;
+    white-space: normal;
+    line-height: 1.4;
+  }
+
+  /* On réduit un peu l'effet 3D pour éviter les débordements */
+  .icon-btn__back {
+    transform: rotate(10deg);
+  }
+
+  .icon-btn:focus-visible .icon-btn__label,
+  .icon-btn:hover .icon-btn__label {
+    transform: none;
+  }
+}

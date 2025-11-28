@@ -1,4 +1,3 @@
-// server/routes/contactRoutes.js  — ENVOI EMAIL: RESEND (par défaut) + fallback Gmail
 const express = require("express");
 const nodemailer = require("nodemailer");
 const rateLimit = require("express-rate-limit");
@@ -7,7 +6,6 @@ require("dotenv").config();
 
 const router = express.Router();
 
-/* ----------------- utils rendu ----------------- */
 function escapeHtml(s = "") {
   return String(s)
     .replaceAll("&", "&amp;")
@@ -51,7 +49,7 @@ function renderEmail({ name, email, message }) {
 const {
   RESEND_API_KEY,
   RESEND_FROM = 'Portfolio Zoe <onboarding@resend.dev>',
-  MAIL_TO, // si vide => fallback GMAIL_USER
+  MAIL_TO,
   GMAIL_USER,
   GMAIL_APP_PASSWORD,
   MAIL_FROM_NAME = "Portfolio Zoe",
@@ -59,7 +57,6 @@ const {
 
 const USE_RESEND = !!RESEND_API_KEY;
 
-/* ----------------- transports ----------------- */
 let gmailTransport = null;
 if (!USE_RESEND) {
   if (!GMAIL_USER || !GMAIL_APP_PASSWORD) {
@@ -88,7 +85,7 @@ async function sendWithResend({ to, subject, html, text, replyTo }) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from: RESEND_FROM, // ex: 'Portfolio Zoe <onboarding@resend.dev>'
+      from: RESEND_FROM,
       to: Array.isArray(to) ? to : [to],
       subject,
       html,

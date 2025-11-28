@@ -1,16 +1,15 @@
 import React from "react";
-import Lenis from '@studio-freight/lenis';
 import { useEffect } from "react";
+import Lenis from '@studio-freight/lenis';
 import Navbar from "../../Components/Navbar/Navbar";
-// import Footer from "../../Components/footer/Footer";
 import Intro from "./Intro";
-import About from '../About /About';
+import WhoAmISection from "../../Components/WhoAmI/WhoAmI";
+import Aboutme from "../../Components/Aboutme/WhoAmI";
 import Experiences from "../Experiences/Experiences";
 import Projects from "../Projects/Projects";
 import Skills from "../Skills/Skills";
-import ContactSection from "../Contact/ContactSection";
+import Footer from '../../Components/Footer/Footer';
 import ClickSpark from '../../Components/ClickSpark/ClickSpark';
-import Scrollzoom from '../../Components/Scrollzoom/Scrollzoom';
 import './Home.css';
 
 
@@ -40,12 +39,12 @@ export default function Home() {
       >
         <Navbar />
         <Intro />
-        <About/>
-        <Scrollzoom/>
+        <WhoAmISection/>
+        {/* <Aboutme/> */}
         <Experiences/>
         <Projects/>
         {/* <Skills /> */}
-        <ContactSection />
+        <Footer />
         </ClickSpark>
     </div></>
   );

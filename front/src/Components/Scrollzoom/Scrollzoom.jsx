@@ -5,12 +5,12 @@ import { useRef } from 'react';
 
 // tes images à afficher :
 import img1 from '/assets/titre3.png';
-import img6 from '/assets/barcelone.avif';
-import img2 from '/assets/queens.webp';
-import img4 from '/assets/orange.jpg';
-import img5 from '/assets/station.jpg';
-import img3 from '/assets/ce.jpg';
-import img7 from '/assets/fashion.jpg';
+import img6 from '/assets/suit.png';
+import img2 from '/assets/book.png';
+import img4 from '/assets/cup.png';
+import img5 from '/assets/plant.png';
+import img3 from '/assets/fusee.png';
+import img7 from '/assets/diplo.png';
 
 export default function Scrollzoom() {
   const container = useRef(null);

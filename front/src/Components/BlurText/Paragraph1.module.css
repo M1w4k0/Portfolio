@@ -1,0 +1,28 @@
+.para1{
+  display: flex;
+  font-size: 65px;
+  line-height: 1;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.para1 .word1{
+  position: relative;
+  margin-right: 12px;
+  margin-top: 12px;
+}
+
+.para1 .word1 .shadow1{
+  position: absolute;
+  opacity: 0.2; /* 20% */
+}
+
+
+@media (max-width: 680px){
+.para1{
+  font-size: 35px;
+  padding: 15px;
+
+}
+
+}
