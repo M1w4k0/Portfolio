@@ -4,7 +4,7 @@ import { Routes, Route, NavLink, useLocation } from "react-router-dom";
 import Lenis from '@studio-freight/lenis';
 import Navbar from "./Components/Navbar/Navbar";
 import Intro from "./pages/Home/Intro";
-import WhoAmISection from "./Components/WhoAmI/WhoAmI";
+import WhoAmISection from "./Components/WhoamI/WhoAmI";
 import Aboutme from "./Components/Aboutme/Aboutme";
 import Experiences from "./pages/Experiences/Experiences";
 import Projects from "./pages/Projects/Projects";
