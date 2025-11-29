@@ -128,10 +128,6 @@ export default function Footer() {
               </a>
             </div>
 
-            <div className="cc-live" role="status" aria-live="polite">
-              {status === "error" && <span className="cc-toast err">❌ {errMsg}</span>}
-              {status === "success" && <span className="cc-toast ok">✅ Message sent!</span>}
-            </div>
           </form>
         </div>
 
