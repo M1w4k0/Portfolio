@@ -10,7 +10,7 @@ import Experiences from "./pages/Experiences/Experiences";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
 import Skills from "./pages/Skills/Skills";
-import Footer from './Components/Footer/Footer';
+import Footer from './Components/footer/Footer';
 import ClickSpark from './Components/ClickSpark/ClickSpark';
 import './App.css';
  
