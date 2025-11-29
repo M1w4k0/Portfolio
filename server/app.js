@@ -10,7 +10,7 @@ const contactRoutes = require("./routes/contactRoutes");
 const ALLOWED = [
   "http://localhost:3000",
   "http://localhost:5173",
-  "https://portfolio-q9w4.vercel.app/",
+  "https://portfolio-q9w4.vercel.app",
 ];
 
 // CORS global (GET/POST/OPTIONS) – compatible Express 5
