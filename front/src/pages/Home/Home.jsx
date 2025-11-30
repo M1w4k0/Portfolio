@@ -4,7 +4,6 @@ import Lenis from '@studio-freight/lenis';
 import Navbar from "../../Components/Navbar/Navbar";
 import Intro from "./Intro";
 import WhoAmISection from "../../Components/WhoAmI/WhoAmI";
-import Aboutme from "../../Components/Aboutme/WhoAmI";
 import Experiences from "../Experiences/Experiences";
 import Projects from "../Projects/Projects";
 import Skills from "../Skills/Skills";

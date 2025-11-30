@@ -283,11 +283,6 @@
     margin-top: 5rem;
   }
 
-  .cc-foot-left{
-    justify-items: center;
-    margin: 0 auto;
-
-  }
 
   .cc-miniform {
     width: 100%;
@@ -353,6 +348,15 @@
     justify-content: right;
   }
 
+  .cc-foot-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 🟢 Centre horizontalement le formulaire */
+  justify-content: center;
+  text-align: center;    /* 🟢 Centre le texte dans Safari */
+}
+
  
 }
 
@@ -370,11 +374,14 @@
     font-size: 2.8rem;
   }
 
-    .cc-foot-left{
-    justify-items: center;
-    margin: 0 auto;
-
-  }
+  .cc-foot-left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 🟢 Centre horizontalement le formulaire */
+  justify-content: center;
+  text-align: center;    /* 🟢 Centre le texte dans Safari */
+}
 
    .cc-foot-right{
     text-align: right;
