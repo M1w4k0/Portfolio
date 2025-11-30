@@ -5,7 +5,7 @@ import './Aboutme.css';
 import { IoIosDownload } from "react-icons/io";
 
 
-const paragraph = "When direction isn’t given, I build it.";
+const paragraph = "So I do what I always do when direction isn’t given : I build it.";
 
 const items = [
   { icon: <IoIosDownload />, color: 'blue', label: 'French', file: '/cv-fr.pdf'   },

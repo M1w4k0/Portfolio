@@ -3,6 +3,11 @@ import "./Experiences.css";
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import ParallaxPage from "../../Components/ParallaxPage/ParallaxDemo.jsx";
+import Character from '../../Components/BlurText/Character2';
+
+
+const paragraph = "Today, I use what I learned almost every day — working, studying, and making decisions with a sense of purpose that grew from all those moments, even the unexpected ones."
+
 
 export default function Experiences() {
 
@@ -14,12 +19,17 @@ const panels = [
     num: "01",
     title: "ORANGE - APR 2020",
     desc:
-      "This first experience gave me my initial exposure to Profesional wordl and real responsibilities — enough to spark my interest in tech & innovation.",
+      "This first experience gave me my initial exposure to Profesional world and real responsibilities — enough to spark my interest in tech & innovation.",
     content:
-       "- First look inside a major tech company\n" +
-      "- Discovery of networks, systems and behind-the-scenes operations\n" +
-      "- Observation of how data, people and technology connect\n\n" +
+       "- Research project in operational marketing\n" +
+      "- Introduction to the world of data\n" +
+      "- Foundations of telecommunication networks\n\n" +
       "**This experience sparked my curiosity for the hidden logic of tech and the world of innovation.**",
+      
+
+
+
+
 
     img: "./assets/orange.jpg",
     alt: "Intro message",
@@ -130,16 +140,16 @@ const panels = [
               and clarified what I wanted to do.
             </p>
 
-            <a href="#stories" className="cc-button cc-button--ghost">
-              Explore projects
-            </a>
+            <NavLink to="/projects"><button className="cc-button cc-button--ghost">
+               Explore projects
+            </button></NavLink>
           </div>
         </section>
         <ParallaxPage />
 
         <section className="cc-fullstory">
           <p className="cc-fullstory-kicker">
-            To understand why I code the way I do, you need to know where it all began.
+            To understand why I work the way I do, you need to know where it all began.
           </p>
 
           <h2 className="cc-fullstory-title">
@@ -220,8 +230,7 @@ const panels = [
 
           <div className="cc-cta-wrap">
             <h2 id="cta-title" className="cc-cta-title">
-              Today, I use what I learned almost every day — working, studying, and making 
-              decisions with a sense of purpose that grew from all those moments, even the unexpected ones.
+              <Character paragraph={paragraph}/>
             </h2>
 
             <NavLink to="/contact"><button className="cc-cta-btn" href="#book">
