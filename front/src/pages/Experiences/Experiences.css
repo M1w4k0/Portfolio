@@ -455,20 +455,21 @@
     row-gap: 1.75rem;
   }
 
-  .cc-case__num,
-  .cc-case__tag {
+  .cc-case__num {
     position: static;
     margin-bottom: 0.4rem;
     font-size: 0.85rem;
   }
 
-  .cc-case__tag {
-    justify-content: flex-start;
+ .cc-case__tag {
+    display: none !important; /* cache le texte + icône */
   }
-
+  .cc-dot {
+    display: none !important; /* cache le rond */
+  }
   .cc-case__title {
     margin-left: 0;
-    margin-top: 0.2rem;
+    margin-top: 5rem;
     font-size: clamp(3.8rem, 9vw, 3.4rem);
     line-height: 0.95;
   }
@@ -610,5 +611,12 @@
   .cc-cta-wrap {
     margin-top: 3.5rem;
     margin-bottom: 4.5rem;
+  }
+
+  .cc-case__tag {
+    display: none !important; /* cache le texte + icône */
+  }
+  .cc-dot {
+    display: none !important; /* cache le rond */
   }
 }

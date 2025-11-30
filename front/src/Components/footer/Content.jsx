@@ -1,7 +1,7 @@
 // src/sections/ContactSection.jsx
 import React, { useEffect, useMemo, useState } from "react";
 import "./Content.css";
-import { Mail, Linkedin } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 import DotGrid from "../BackDot/BackDot";
 
 export default function Footer() {
@@ -147,8 +147,13 @@ export default function Footer() {
                     <h4>Social media:</h4>
                     <ul className="cc-social">
                       <li>
-                        <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+                        <a href="www.linkedin.com/in/zoe-charrier" target="_blank" rel="noreferrer">
                           <Linkedin size={16} /> LinkedIn
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://github.com/M1w4k0" target="_blank" rel="noreferrer">
+                          <Github size={16} /> Github
                         </a>
                       </li>
                       <li>

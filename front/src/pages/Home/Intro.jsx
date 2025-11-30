@@ -3,7 +3,7 @@ import "./Intro.css";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Character from '../../Components/BlurText/Character';
 
-const paragraph = "For me, it’s all about coding with purpose, thinking like a product designer, and creating real, meaningful value."
+const paragraph = "For me, it’s all about creating with purpose, blending product thinking, business understanding, and technology to deliver real value."
 
 
 export default function Intro() {
@@ -21,7 +21,7 @@ const words = paragraph.split(" ")
           </div>
           <a
             className="tag tag-linkedin"
-            href="https://www.linkedin.com/in/your-profile"
+            href="www.linkedin.com/in/zoe-charrier"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -29,7 +29,7 @@ const words = paragraph.split(" ")
           </a>
           <a
             className="tag tag-github"
-            href="https://www.linkedin.com/in/your-profile"
+            href="https://github.com/M1w4k0"
             target="_blank"
             rel="noopener noreferrer"
           >

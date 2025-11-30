@@ -5,7 +5,7 @@ import './Aboutme.css';
 import { IoIosDownload } from "react-icons/io";
 
 
-const paragraph = "So I did what I always do when cornered : I bet on myself.";
+const paragraph = "When direction isn’t given, I build it.";
 
 const items = [
   { icon: <IoIosDownload />, color: 'blue', label: 'French', file: '/cv-fr.pdf'   },
@@ -54,7 +54,7 @@ export default function Aboutme() {
                   <p>
                     I grew up near Angers, in a small town where life was mostly nature,
                     school, and sports. I didn’t have access to many activities, but I learned
-                    to keep myself busy.
+                    to keep myself busy and creative.
                   </p>
                   <p>
                     Spending a lot of time on my own pushed me to work independently,
@@ -85,18 +85,17 @@ export default function Aboutme() {
               <div className="sc-grid">
                 <div className="sc-num">02</div>
                 <div className="sc-rule" />
-                <h2 className="sc-head">CHOOSING DATA</h2>
+                <h2 className="sc-head">A NEW GAP</h2>
                 <div className="sc-body">
                   <p>
                     In Paris, I joined a strong athletics club, specialized in middle-distance and
-                    the 100m, and learned real discipline — until I stopped to focus on EPIN,
-                    one of the top schools in France.
+                    sprint, and learned real discipline. I also had the chance to study at EPIN, one of the top high schools in France 
+                    — a place that pushed me to aim higher.
                   </p>
                   <p>
-                    Choosing NEOMA was my first major step: a business program with a strong tech
-                    focus, where I could build both a professional and international profile.
-                    Through projects and internships, I discovered data, code, and product thinking
-                    as ways to understand how things work.
+                    After graduating with honors, choosing NEOMA became my first major decision: a business program with a strong tech focus, 
+                    where I could start shaping both a professional and international profile. Through projects and internships, 
+                    I discovered data, code, and product thinking as ways to understand how things work.
                   </p>
                   <p>
                     Little by little, my interests became clearer: I like connecting strategy,
@@ -111,7 +110,7 @@ export default function Aboutme() {
                 </div>
 
                 <blockquote className="sc-quote">
-                  Data is not just numbers — it’s narrative, discipline and leverage.
+                  Discipline builds performance. Insights build direction.
                 </blockquote>
               </div>
             </div>
@@ -143,7 +142,7 @@ export default function Aboutme() {
                 </div>
 
                 <blockquote className="sc-quote">
-                  The goal isn’t more information — it’s better decisions and useful change.
+                  Understanding what matters is the foundation of everything else.
                 </blockquote>
               </div>
               <div className="separateur-sticky3"></div>
@@ -173,12 +172,9 @@ export default function Aboutme() {
 
           <p className="fc-sub">
             Everything you need to know is inside
-            <br />
-            - download my CV.
           </p>
 
           <div className="fc-copy">
-            <p className="fc-label">Now it’s time :</p>
             <p className="fc-text">
               If you’re looking to understand the progression behind my skills, the roles I’ve taken, the challenges I’ve solved, 
               and the direction I’m heading next: my CV tells the entire story with clarity.
