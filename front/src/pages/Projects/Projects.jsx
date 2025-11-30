@@ -12,6 +12,8 @@ export default function Projectsoff() {
     "Creating projects that blend data, UX, and automation to solve practical, real problems.",
   ];
 
+  
+
   return (
     <>
     <section className="ready">

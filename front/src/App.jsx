@@ -1,7 +1,7 @@
-import React from 'react';
-import { useEffect } from "react";
-import { Routes, Route, NavLink, useLocation } from "react-router-dom";
-import Lenis from '@studio-freight/lenis';
+import React, { useEffect, useState } from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Lenis from "@studio-freight/lenis";
+
 import Navbar from "./Components/Navbar/Navbar";
 import Intro from "./pages/Home/Intro";
 import WhoAmISection from "./Components/WhoamI/WhoAmI";
@@ -10,11 +10,13 @@ import Experiences from "./pages/Experiences/Experiences";
 import Projects from "./pages/Projects/Projects";
 import Contact from "./pages/Contact/Contact";
 import Skills from "./pages/Skills/Skills";
-import Footer from './Components/footer/Footer';
-import ClickSpark from './Components/ClickSpark/ClickSpark';
-import './App.css';
- 
+import Footer from "./Components/footer/Footer";
+import ClickSpark from "./Components/ClickSpark/ClickSpark";
 
+import "./App.css";
+
+import { AnimatePresence } from "framer-motion";
+import Preloader from "./Components/Preloader/Preloader";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -43,96 +45,115 @@ function Layout({ children }) {
 }
 
 function App() {
+  // Smooth scroll Lenis
+  useEffect(() => {
+    const lenis = new Lenis();
 
-  useEffect( () => {
-      const lenis = new Lenis()
-     
-      function raf(time) {
-          lenis.raf(time)
-          requestAnimationFrame(raf)
-      }
-  
-      requestAnimationFrame(raf)
-  },[])
-  
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
+
+  // Preloader
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+      document.body.style.cursor = "default";
+      window.scrollTo(0, 0);
+    }, 2000);
+  }, []);
+
   return (
     <>
-       <ScrollToTop />
-        <Routes>
+      <main>
+        <AnimatePresence mode="wait">
+          {isLoading && <Preloader />}
+        </AnimatePresence>
 
-          {/* HOME : / */}
-          <Route path="/" element={
-            <Layout>
-              <Intro />
-              <WhoAmISection />
-              <Aboutme />
-            </Layout>
-          } />
+        {!isLoading && (
+          <>
+            <ScrollToTop />
+            <Routes>
+              {/* HOME : / */}
+              <Route
+                path="/"
+                element={
+                  <Layout>
+                    <Intro />
+                    <WhoAmISection />
+                    <Aboutme />
+                  </Layout>
+                }
+              />
 
-          {/* EXPERIENCE : /experience */}
-          <Route
-            path="/experience"
-            element={
-              <Layout>
-                <Experiences />
-              </Layout>
-            }
-          />
+              {/* EXPERIENCE : /experience */}
+              <Route
+                path="/experience"
+                element={
+                  <Layout>
+                    <Experiences />
+                  </Layout>
+                }
+              />
 
-          {/* PROJECTS : /projects */}
-          <Route
-            path="/projects"
-            element={
-              <Layout>
-                <Projects />
-              </Layout>
-            }
-          />
+              {/* PROJECTS : /projects */}
+              <Route
+                path="/projects"
+                element={
+                  <Layout>
+                    <Projects />
+                  </Layout>
+                }
+              />
 
-          {/* SKILLS : /skills */}
-          <Route
-            path="/skills"
-            element={
-              <Layout>
-                <Skills />
-              </Layout>
-            }
-          />
+              {/* SKILLS : /skills */}
+              <Route
+                path="/skills"
+                element={
+                  <Layout>
+                    <Skills />
+                  </Layout>
+                }
+              />
 
-          {/* CONTACTS : /contacts */}
-          <Route
-            path="/contact"
-            element={
+              {/* CONTACTS : /contact */}
+              <Route
+                path="/contact"
+                element={
+                  <div id="app-root">
+                    <ClickSpark
+                      sparkColor="#8162f4"
+                      sparkSize={10}
+                      sparkRadius={15}
+                      sparkCount={8}
+                      duration={400}
+                    >
+                      <Navbar />
+                      <Contact />
+                    </ClickSpark>
+                  </div>
+                }
+              />
 
-              <div id="app-root">
-                <ClickSpark
-                  sparkColor="#8162f4"
-                  sparkSize={10}
-                  sparkRadius={15}
-                  sparkCount={8}
-                  duration={400}
-                >
-                  <Navbar />
-                  <Contact/>
-                </ClickSpark>
-              </div>
-              
-              
-            }
-          />
-
-          {/* Route fallback : si l’URL n’existe pas, on renvoie vers la home */}
-          <Route
-            path="*"
-            element={
-              <Layout>
-                <Intro />
-              </Layout>
-            }
-          />
-        </Routes>
-</>
-   
+              {/* Fallback */}
+              <Route
+                path="*"
+                element={
+                  <Layout>
+                    <Intro />
+                  </Layout>
+                }
+              />
+            </Routes>
+          </>
+        )}
+      </main>
+    </>
   );
 }
 

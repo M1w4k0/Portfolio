@@ -14,6 +14,7 @@ import './Home.css';
 
 export default function Home() {
 
+
   useEffect( () => {
     const lenis = new Lenis()
    

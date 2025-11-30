@@ -76,12 +76,12 @@ export default function Navbar() {
           </div> */}
         </li>
 
-        <li className="nav-item dropdown">
+        {/* <li className="nav-item dropdown">
           <NavLink to="/skills"> <span className="dropdown-trigger">
             Skills
-            {/* <img src="./assets/flechebas.png" className="arrow" alt="arrow" /> */}
+            <img src="./assets/flechebas.png" className="arrow" alt="arrow" />
           </span></NavLink>
-          {/* <div className="dropdown-panel">
+          <div className="dropdown-panel">
             <div className="dropdown-column">
               <div className="dropdown-item clickable">
                 <span className="icon" />
@@ -98,8 +98,8 @@ export default function Navbar() {
                 </div>
               </div>
             </div>
-          </div> */}
-        </li>
+          </div>
+        </li> */}
 
         <NavLink to="/contact"><button className="contact-button">Get in touch</button></NavLink>
 
