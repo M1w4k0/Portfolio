@@ -1,6 +1,7 @@
 import React from 'react';
 import './Projects.css';
 import HorizontalScroll from "../../Components/HorizontalScroll/HorizontalScroll";
+import Skillsmenu from "../../Components/Skillsmenu/Skillsmenu";
 
 
 export default function Projectsoff() {
@@ -12,7 +13,50 @@ export default function Projectsoff() {
     "Creating projects that blend data, UX, and automation to solve practical, real problems.",
   ];
 
-  
+  const projects = [
+
+    {
+      title1: "Data Analysis &",
+      title2: "Insight Generation",
+      src: "../assets/data.png"
+    },
+
+    {
+      title1: "Applied",
+      title2: "Machine Learning",
+      src: "../assets/ML.jpg"
+    },
+
+    {
+      title1: "Advanced Python",
+      title2: "& SQL Manipulation",
+      src: "../assets/sql.png"
+    },
+
+    {
+      title1: "Full-Stack Web",
+      title2: "Development",
+      src: "../assets/react.jpg"
+    },
+
+    {
+      title1: "Web Scraping",
+      title2: "& Automation",
+      src: "../assets/automation.gif"
+    },
+    {
+      title1: "Data Visualization",
+      title2: "& UX design",
+      src: "../assets/viz.jpg"
+    },
+    {
+      title1: "Project Management &",
+      title2: "A/B Testing",
+      src: "../assets/pro.png"
+    }
+
+  ]
+
 
   return (
     <>
@@ -66,7 +110,16 @@ export default function Projectsoff() {
 
   <section className="skills-test">
       <h1 className="skills-big">SKILLS</h1>
-      <p className="skills-sub">What I gained</p>
+      <main className="main">
+      <div className="gallery">
+        <p>What I gained</p>
+          {projects.map((project, index) => (
+            <Skillsmenu project={project} key={index} />
+            ))}
+
+      </div>
+    </main>
+{/* 
       <div className="skills-questions">
         <p>Data Analysis & Insight Generation</p>
         <p>Applied Machine Learning</p>
@@ -76,8 +129,10 @@ export default function Projectsoff() {
         <p>Data Visualization & Storytelling</p>
         <p>Project Management & A/B Testing</p>
         <p>UX-Driven Product Thinking</p>
-      </div>
+      </div> */}
     </section>
+
+    
     </>
   );
 }

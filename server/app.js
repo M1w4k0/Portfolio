@@ -11,6 +11,7 @@ const ALLOWED = [
   "http://localhost:3000",
   "http://localhost:5173",
   "https://portfolio-q9w4.vercel.app",
+  "https://zoecharrier.com",
 ];
 
 // CORS global (GET/POST/OPTIONS) – compatible Express 5

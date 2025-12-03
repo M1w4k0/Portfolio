@@ -404,7 +404,6 @@
 
   .cc-cta-wrap {
     padding-left: 0;
-    max-width: 88vw;
   }
   .cc-cta-title {
     max-width: 100%;
@@ -436,7 +435,7 @@
   }
 
   .cc-cta-wrap {
-    width: 70%;
+    width: 90%;
     margin-top: 6rem;
     margin-bottom: 6rem;
   }
@@ -576,8 +575,8 @@
   /* CTA */
   .cc-cta-wrap {
     width: 100%;
-    margin: 4rem auto 6rem;
-    padding-inline: clamp(1.4rem, 6vw, 2rem);
+    margin: 4rem 0 6rem;
+    padding-inline: 5px;
     justify-self: center;
   }
 
