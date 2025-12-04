@@ -120,7 +120,7 @@ const panels = [
 
   return (
     <>
-      <div className="experiences">
+      <div className="experiences" id="journey">
         <section className="cc-case">
           <div className="cc-case__num">( 02 )</div>
 
@@ -147,7 +147,7 @@ const panels = [
         </section>
         <ParallaxPage />
 
-        <section className="cc-fullstory">
+        <section className="cc-fullstory" id="Jobs">
           <p className="cc-fullstory-kicker">
             To understand why I work the way I do, you need to know where it all began.
           </p>

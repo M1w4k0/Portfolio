@@ -63,7 +63,7 @@ export default function Contact() {
   return (
     <>
       {/* SECTION CONTACT */}
-      <section className="contact-section" data-theme="light">
+      <section className="contact-section" data-theme="light" id="contact">
         <div className="cc-case__num">( 05 )</div>
         <div className="contact-container">
           {/* Colonne gauche : titre + texte */}

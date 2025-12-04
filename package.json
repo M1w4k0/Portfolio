@@ -3,6 +3,7 @@
     "@vitejs/plugin-rsc": "^0.5.3",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
+    "react-router-hash-link": "^2.4.3",
     "react-server-dom-parcel": "^19.2.1"
   }
 }

@@ -7,7 +7,7 @@ import "./WhoAmI.css";
 /* === WhoAmISection (structure inchangée) === */
 export default function WhoAmISection() {
   return (
-    <section className="cc-who-wrap">
+    <section className="cc-who-wrap" id="whoami">
       <div className="cc-case2__num">( 01 )</div>
       {/* Layer 1: pinned background + image (ne bouge pas) */}
       <div className="cc-who-pin">

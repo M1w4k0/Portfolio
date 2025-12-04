@@ -28,7 +28,7 @@ export default function Projectsoff() {
     },
 
     {
-      title1: "Advanced Python",
+      title1: "Python",
       title2: "& SQL Manipulation",
       src: "../assets/sql.png"
     },

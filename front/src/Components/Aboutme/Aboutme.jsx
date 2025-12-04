@@ -116,7 +116,7 @@ export default function Aboutme() {
             </div>
 
             {/* Card 3 */}
-            <div className="sticky-card sticky-card3">
+            <div className="sticky-card sticky-card3" id="mygoals">
               <div className="sc-grid">
                 <div className="sc-num">03</div>
                 <div className="sc-rule" />

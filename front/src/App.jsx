@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Lenis from "@studio-freight/lenis";
 
 import Navbar from "./Components/Navbar/Navbar";
+import NavbarDemo from "./Components/Navbar/NavbarDemo";
 import Intro from "./pages/Home/Intro";
 import WhoAmISection from "./Components/WhoamI/WhoAmI";
 import Aboutme from "./Components/Aboutme/Aboutme";
@@ -36,7 +37,8 @@ function Layout({ children }) {
         sparkCount={8}
         duration={400}
       >
-        <Navbar />
+        {/* <Navbar /> */}
+        <NavbarDemo />
         <main>{children}</main>
         <Footer />
       </ClickSpark>
@@ -133,7 +135,7 @@ function App() {
                       sparkCount={8}
                       duration={400}
                     >
-                      <Navbar />
+                      <NavbarDemo />
                       <Contact />
                     </ClickSpark>
                   </div>
