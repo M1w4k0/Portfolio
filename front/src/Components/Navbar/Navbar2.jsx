@@ -1,4 +1,3 @@
-// Navbar2.jsx
 "use client";
 import React from "react";
 import { motion } from "motion/react";
@@ -19,8 +18,8 @@ export const MenuItem = ({
   children,
   onClick,
   disableHover = false,
-  className = "",   // ← on récupère className
-  ...rest           // ← on récupère toutes les autres props
+  className = "", // ← on récupère className
+  ...rest        // ← on récupère toutes les autres props
 }) => {
   // détecter si c’est le bouton “Get in touch”
   const isCTA = className.includes("contact-menu-item");
@@ -46,7 +45,7 @@ export const MenuItem = ({
         {item}
       </motion.button>
 
-      {/* pas de dropdown sur mobile */}
+      {/* pas de dropdown si disableHover = true (mobile) */}
       {!disableHover && active === item && (
         <motion.div
           initial={{ opacity: 0, scale: 0.85, y: 10 }}
@@ -70,10 +69,9 @@ export const MenuItem = ({
   );
 };
 
-
 export const Menu = ({ setActive, children, disableHover = false }) => {
   return (
-   <nav
+    <nav
       // reset du state uniquement si hover actif (desktop)
       onMouseLeave={disableHover ? undefined : () => setActive(null)}
       className="relative flex justify-center group"
@@ -95,7 +93,7 @@ export const Menu = ({ setActive, children, disableHover = false }) => {
       </div>
 
       {/* Contenu (texte, items) qui ne scale pas */}
-     <div className="relative flex justify-center items-center space-x-11 px-8 py-3.5">
+      <div className="relative flex justify-center items-center space-x-11 px-8 py-3.5">
         {children}
       </div>
     </nav>
