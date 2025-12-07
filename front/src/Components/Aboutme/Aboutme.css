@@ -110,6 +110,7 @@
   font-size: 2rem;
   width: 100%;
   align-content: center;
+  margin-top: 4%;
 }
 
 /* état animée quand la carte est dans le viewport */
@@ -383,7 +384,19 @@
   .fc-lang-label {
     margin-top: 2.5rem;
   }
+
+  .sc-body p {
+  margin: 0 0 1rem;
+  }
+ .sc-body {
+  
+  font-size: 0.8rem;
+  line-height: 1.3;
+  width: 90%;
 }
+
+}
+
 
 /* Mobile <= 768px */
 @media (max-width: 768px) {

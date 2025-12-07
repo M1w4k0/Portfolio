@@ -1,11 +1,16 @@
 import React from 'react';
 import './Projects.css';
-import HorizontalScroll from "../../Components/HorizontalScroll/HorizontalScroll";
+// import HorizontalScroll from "../../Components/HorizontalScroll/HorizontalScroll";
 import Skillsmenu from "../../Components/Skillsmenu/Skillsmenu";
+import Projet1 from "../../Components/Projetpres/Projet1";
+import Projet2 from "../../Components/Projetpres/Projet2";
+import Projet3 from "../../Components/Projetpres/Projet3";
+import Projet4 from "../../Components/Projetpres/Projet4";
+
 
 
 export default function Projectsoff() {
-
+  
    const signs = [
     "Building tools that scrape, clean, and structure real-world data from scratch.",
     "Designing full-stack features — from database logic to interactive front-end interfaces.",
@@ -16,46 +21,31 @@ export default function Projectsoff() {
   const projects = [
 
     {
-      title1: "Data Analysis &",
-      title2: "Insight Generation",
+      title1: "YOWL UGC",
+      title2: "Plateform",
       src: "../assets/data.png"
     },
 
     {
-      title1: "Applied",
-      title2: "Machine Learning",
+      title1: "Business data",
+      title2: "analyse report",
       src: "../assets/ML.jpg"
     },
 
     {
-      title1: "Python",
-      title2: "& SQL Manipulation",
+      title1: "F1 championship",
+      title2: "data analysis",
       src: "../assets/sql.png"
     },
 
     {
-      title1: "Full-Stack Web",
-      title2: "Development",
+      title1: "MyShop fullstack",
+      title2: "website",
       src: "../assets/react.jpg"
-    },
-
-    {
-      title1: "Web Scraping",
-      title2: "& Automation",
-      src: "../assets/automation.gif"
-    },
-    {
-      title1: "Data Visualization",
-      title2: "& UX design",
-      src: "../assets/viz.jpg"
-    },
-    {
-      title1: "Project Management &",
-      title2: "A/B Testing",
-      src: "../assets/pro.png"
     }
 
   ]
+
 
 
   return (
@@ -82,44 +72,37 @@ export default function Projectsoff() {
         <span>Get things built.</span>
       </div>
     </section>
-    
-    
-    <div className="projects" id="projects">
-      <HorizontalScroll />
-      <div className="cc-slice">
-  <div className="cc-slice-media">
-    <img
-      src="https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?q=80&w=1600&auto=format&fit=crop"
-      alt="Visuel"
-      loading="lazy"
-      className="cc-slice-img"
-    />
-  </div>
 
-  <div className="cc-slice-copy">
-    <h2 className="cc-slice-title">Scandinavian launch</h2>
-    <p className="cc-slice-text">
-      Aliquam metus lacus, efficitur sit amet ligula a, vehicula eleifend dolor. Pellentesque vulputate
-      consectetur lectus, sit amet pellentesque leo congue ut. Vivamus turpis est, mollis et elit eget,
-      venenatis dictum nisl. Suspendisse sit amet erat vel ipsum elementum mattis. In vel sagittis velit.
-    </p>
-  </div>
-</div>
-    </div>
-
-
-  <section className="skills-test">
-      <h1 className="skills-big">SKILLS</h1>
-      <main className="main">
+  <section className='Fondmain'>
+    <main className="main">
       <div className="gallery">
-        <p>What I gained</p>
+        <p className='gallerytitle'>Table of content</p>
           {projects.map((project, index) => (
             <Skillsmenu project={project} key={index} />
             ))}
 
       </div>
     </main>
-{/* 
+    </section>
+
+    <Projet1/>
+    {/* <div className='fond'></div> */}
+    <Projet2/>
+     {/* <div className='fond'></div> */}
+    <Projet3/>
+     {/* <div className='fond'></div> */}
+    <Projet4/>
+
+
+    <div className="projects" id="projects">
+      {/* <HorizontalScroll /> */}
+    
+    </div>
+
+
+  <section className="skills-test">
+      <h1 className="skills-big">SKILLS</h1>
+
       <div className="skills-questions">
         <p>Data Analysis & Insight Generation</p>
         <p>Applied Machine Learning</p>
@@ -129,8 +112,64 @@ export default function Projectsoff() {
         <p>Data Visualization & Storytelling</p>
         <p>Project Management & A/B Testing</p>
         <p>UX-Driven Product Thinking</p>
-      </div> */}
+      </div>
     </section>
+
+    <section className="press-logos">
+      <div className="press-grid">
+
+      <a href="https://emarsys.com" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/emarsyslogo.png" alt="Emarsys Marketing Platform" />
+      </a>
+
+      <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/GitHublogo.png" alt="GitHub" />
+      </a>
+
+      <a href="https://www.mysql.com" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/sqllogo.png" alt="MySQL Database" />
+      </a>
+
+      <a href="https://jupyter.org" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/jupyterlogo.png" alt="Jupyter Notebook" />
+      </a>
+
+      <a href="https://www.eulerian.com" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/eulerienlogo.png" alt="Eulerian Analytics" />
+      </a>
+
+      <a href="https://www.python.org" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/pythonlogo.jpg" alt="Python Programming Language" />
+      </a>
+
+      <a href="https://react.dev" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/reactlogo.png" alt="React JavaScript Library" />
+      </a>
+
+      <a href="https://powerbi.microsoft.com" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/powerbilogo.png" alt="Microsoft Power BI" />
+      </a>
+
+      <a href="https://www.php.net" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/phplogo.png" alt="PHP Backend Language" />
+      </a>
+
+      <a href="https://www.thankyouanalytics.com" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/tyalogo.png" alt="Thank You Analytics" />
+      </a>
+
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/jslogo.png" alt="JavaScript Programming Language" />
+      </a>
+
+      <a href="https://www.dartagnan.io" target="_blank" rel="noopener noreferrer">
+        <img src="/assets/dartagnanlogo.png" alt="Dartagnan Email Builder" />
+      </a>
+
+    </div>
+
+</section>
+
 
     
     </>

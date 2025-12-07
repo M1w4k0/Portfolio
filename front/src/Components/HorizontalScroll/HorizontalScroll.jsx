@@ -27,6 +27,10 @@ const PANELS = [
     skills: ["Relational database design", "SQL & data modeling", "authentication", "UGC & review workflows", "Backend–frontend integration"],
     variant: "is-yowl"
   },
+
+
+
+  
   {
     key: "p2",
     title: "Business Data Analysis Report",

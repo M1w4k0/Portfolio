@@ -88,17 +88,15 @@ export default function Aboutme() {
                 <h2 className="sc-head">A NEW GAP</h2>
                 <div className="sc-body">
                   <p>
-                    In Paris, I joined a strong athletics club, specialized in middle-distance and
-                    sprint, and learned real discipline. I also had the chance to study at EPIN, one of the top high schools in France 
+                    In Paris, I joined a strong athletics club, and learned real discipline. I also had the chance to study at EPIN, one of the top high schools in France 
                     — a place that pushed me to aim higher.
                   </p>
                   <p>
-                    After graduating with honors, choosing NEOMA became my first major decision: a business program with a strong tech focus, 
-                    where I could start shaping both a professional and international profile. Through projects and internships, 
-                    I discovered data, code, and product thinking as ways to understand how things work.
+                    After graduating with honors, I choosed to study at NEOMA BS: a business program with a strong tech focus.
+                     Through projects and internships, I discovered data, code, and product thinking as ways to understand how things work.
                   </p>
                   <p>
-                    Little by little, my interests became clearer: I like connecting strategy,
+                    My interests became clearer: I like connecting strategy,
                     numbers, and human behavior — using data and AI to make better decisions
                     and build useful systems.
                   </p>
