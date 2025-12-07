@@ -146,6 +146,32 @@
 
 .contact-row-action {
   margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cv-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2.2rem;
+  border: 1px solid #111111;
+  background: #ffffff;
+  color: #111111;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.cv-btn:hover {
+  background: #111111;
+  color: #ffffff;
+  transform: translateY(-1px);
 }
 
 .ctct {
@@ -346,7 +372,6 @@
   .contact-title {
     font-size: 3rem;
     margin-top: 20%;
-
   }
 
   .contact-text {
@@ -358,7 +383,13 @@
     font-size: 0.9rem;
   }
 
-  .ctct {
+  .contact-row-action {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ctct,
+  .cv-btn {
     width: 100%;
     text-align: center;
   }
@@ -374,12 +405,5 @@
 
   .rule-text {
     font-size: 0.94rem;
-  }
-}
-
-/* Accessibilité */
-@media (prefers-reduced-motion: reduce) {
-  .ctct {
-    transition: none;
   }
 }

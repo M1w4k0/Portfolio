@@ -14,7 +14,7 @@ export default function Projet1() {
 
   return (
     <>
-      <section className="hero">
+      <section id="project-1" className="hero">
         {/* IMAGE À GAUCHE */}
         <div className="hero-left">
           <img

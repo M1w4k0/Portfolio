@@ -19,32 +19,31 @@ export default function Projectsoff() {
   ];
 
   const projects = [
-
-    {
-      title1: "YOWL UGC",
-      title2: "Plateform",
-      src: "../assets/data.png"
-    },
-
-    {
-      title1: "Business data",
-      title2: "analyse report",
-      src: "../assets/ML.jpg"
-    },
-
-    {
-      title1: "F1 championship",
-      title2: "data analysis",
-      src: "../assets/sql.png"
-    },
-
-    {
-      title1: "MyShop fullstack",
-      title2: "website",
-      src: "../assets/react.jpg"
-    }
-
-  ]
+  {
+    title1: "YOWL UGC",
+    title2: "Plateform",
+    src: "../assets/broxw.png",
+    anchor: "#project-1"
+  },
+  {
+    title1: "Business data",
+    title2: "analyse report",
+    src: "../assets/ndata.png",
+    anchor: "#project-2"
+  },
+  {
+    title1: "Myshop e-commerce",
+    title2: "website",
+    src: "../assets/myshop2.png",
+    anchor: "#project-3"
+  },
+  {
+    title1: "CRM ",
+    title2: "scandinavian launch",
+    src: "../assets/scandinaves2.png",
+    anchor: "#project-4"
+  }
+];
 
 
 
@@ -85,13 +84,13 @@ export default function Projectsoff() {
     </main>
     </section>
 
-    <Projet1/>
+    <Projet1 />
     {/* <div className='fond'></div> */}
     <Projet2/>
      {/* <div className='fond'></div> */}
-    <Projet3/>
+    <Projet3 />
      {/* <div className='fond'></div> */}
-    <Projet4/>
+    <Projet4 />
 
 
     <div className="projects" id="projects">
@@ -102,7 +101,7 @@ export default function Projectsoff() {
 
   <section className="skills-test">
       <h1 className="skills-big">SKILLS</h1>
-
+       <h1 className="skills-title">& tools I master</h1>
       <div className="skills-questions">
         <p>Data Analysis & Insight Generation</p>
         <p>Applied Machine Learning</p>

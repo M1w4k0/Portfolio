@@ -138,14 +138,22 @@ export default function Contact() {
               )}
 
               <div className="contact-row contact-row-action">
-                <button type="submit" className="ctct" disabled={disabled}>
-                  {status === "sending"
-                    ? "Sending…"
-                    : status === "success"
-                    ? "Sent!"
-                    : "Send request"}
-                </button>
-              </div>
+                  <button type="submit" className="ctct" disabled={disabled}>
+                    {status === "sending"
+                      ? "Sending…"
+                      : status === "success"
+                      ? "Sent!"
+                      : "Send request"}
+                  </button>
+                   <a
+                    href="/assets/CV_Zoe_Bertrand.pdf"   // 👉 change le chemin/nom si besoin
+                    download
+                    className="cv-btn"
+                  >
+                    Download my CV
+                  </a>
+
+                </div>
             </form>
           </div>
         </div>
@@ -155,14 +163,13 @@ export default function Contact() {
       <section className="rules-section">
         <div className="rules-inner">
           <header className="rules-header">
-            <h2 className="rules-title">The rules</h2>
+            <h2 className="rules-title">What I'm opened for</h2>
             <p className="rules-sub">(if you want to work together)</p>
           </header>
 
           <div className="rules-grid">
             {/* Rule 1 */}
             <article className="rule-card">
-              <div className="rule-number">1</div>
               <h3 className="rule-title">6-month internship</h3>
               <p className="rule-subtitle">Starting September 2027</p>
               <div className="rule-divider" />
@@ -175,7 +182,6 @@ export default function Contact() {
 
             {/* Rule 2 */}
             <article className="rule-card">
-              <div className="rule-number">2</div>
               <h3 className="rule-title">Freelance missions</h3>
               <p className="rule-subtitle">When you need extra brains on data</p>
               <div className="rule-divider" />
@@ -189,7 +195,6 @@ export default function Contact() {
 
             {/* Rule 3 */}
             <article className="rule-card">
-              <div className="rule-number">3</div>
               <h3 className="rule-title">Collabs & conversations</h3>
               <p className="rule-subtitle">For ambitious, curious people</p>
               <div className="rule-divider" />
