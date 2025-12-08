@@ -131,9 +131,9 @@
   background: #0e0620;
   color: #fff;
   padding: 13% 5%;
-  height: 85vh;
+  min-height: 70vh;          /* au lieu de height: 85vh */
   display: flex;
-  align-items: start;
+  align-items: center;       /* centre verticalement */
   gap: 2rem;
 }
 
@@ -233,13 +233,21 @@
     gap: clamp(5px, 2vw, 14px);
   }
 
-  .quote-img {
+   .quote-img {
     width: clamp(56px, 14vw, 96px);
   }
 
   .char {
     width: 100%;
   }
+
+   .cc-epi {
+    min-height: 60vh;        /* au lieu de height: 50vh */
+    padding: 12% 6%;
+    gap: clamp(5px, 2vw, 14px);
+    align-items: center;     /* on garde le centrage vertical aussi en mobile */
+  }
+
 }
 
 /* ========== PETIT MOBILE ≤ 600px ========== */

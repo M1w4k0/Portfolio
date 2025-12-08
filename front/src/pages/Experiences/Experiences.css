@@ -387,13 +387,19 @@
   .tp-rows {
     grid-column: 1 / -1;
   }
-  .tp-row {
+ .tp-row {
     grid-template-columns: 1fr;
+    position: relative;
+    padding-top: 3rem;
   }
-  .tp-num {
-    margin-top: 20px;
-    margin-bottom: -6px;
-    font-size: clamp(120px, 32vw, 180px);
+   .tp-num {
+    position: static; /* 🔥 enlève le absolute */
+    top: auto;
+    margin: 0 0 0.5rem 0; /* espace sous le numéro */
+    font-size: clamp(4rem, 10vw, 3.5rem);
+    line-height: 1;
+    -webkit-mask-image: none;
+    mask-image: none;
   }
   .tp-body-grid {
     grid-template-columns: 1fr;
@@ -408,6 +414,13 @@
   .cc-cta-title {
     max-width: 100%;
   }
+
+   .tp-left {
+    margin-top: 0;
+    height: auto;
+    overflow: visible;
+  }
+
 }
 
 /* ============================= */
@@ -509,7 +522,7 @@
 
   /* PROCESS INTRO */
   .tp-process {
-    padding: 3rem clamp(1.4rem, 6vw, 2rem);
+    padding: 2rem;
   }
 
   .cc-pointtxt {
@@ -524,6 +537,9 @@
   .tp-left {
     margin-top: 0;
     height: auto;
+    font-size: 3rem;
+    overflow: visible !important;
+
   }
 
   .tp-kicker {
@@ -542,11 +558,12 @@
   }
 
   .tp-row {
-    padding-block: 0.35rem;
+    padding-top: 3rem;
+
   }
 
-  .tp-head{
-    padding-top: 3rem;
+  .tp-head {
+    cursor: default;
   }
 
   .tp-title {
@@ -584,6 +601,32 @@
     font-size: clamp(1.6rem, 5.4vw, 2.1rem);
     width: 100%;
   }
+
+  .tp-body {
+   max-height: none !important;
+    padding: 12px 0 18px !important;
+    transition: none !important;
+  }
+
+  .tp-row:hover .tp-body,
+  .tp-row:focus-within .tp-body,
+  .tp-row.is-open .tp-body {
+    max-height: none !important;
+    padding: 12px 0 18px !important;
+  }
+
+  .tp-num {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+
+  .tp-row:hover .tp-num,
+  .tp-row:focus-within .tp-num,
+  .tp-row.is-open .tp-num {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
+
 }
 
 /* ============================= */
@@ -604,7 +647,8 @@
   }
 
   .tp-num {
-    font-size: clamp(96px, 26vw, 140px);
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
   }
 
   .cc-cta-wrap {

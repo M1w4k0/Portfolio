@@ -3,6 +3,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import "./Content.css";
 import { Mail, Linkedin, Github } from "lucide-react";
 import DotGrid from "../BackDot/BackDot";
+import { NavLink } from "react-router-dom";
 
 export default function Footer() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "", website: "" });
@@ -136,10 +137,10 @@ export default function Footer() {
                   <div className="cc-foot-mid">
                     <h4>Quick links:</h4>
                     <ul>
-                      <li><a href="#experiences">Experiences</a></li>
-                      <li><a href="#projects">Projects</a></li>
-                      <li><a href="#skills">Skills</a></li>
-                      <li><a href="#about">About</a></li>
+                      <li><NavLink to="/experience">Experiences</NavLink></li>
+                      <li><NavLink to="/projects">Projects</NavLink></li>
+                      <li><NavLink to="/contact">Contact</NavLink></li>
+                      <li><NavLink to="/">About</NavLink></li>
                     </ul>
                   </div>
 
@@ -147,7 +148,7 @@ export default function Footer() {
                     <h4>Social media:</h4>
                     <ul className="cc-social">
                       <li>
-                        <a href="www.linkedin.com/in/zoe-charrier" target="_blank" rel="noreferrer">
+                        <a href="https://www.linkedin.com/in/zoe-charrier/" target="_blank" rel="noreferrer">
                           <Linkedin size={16} /> LinkedIn
                         </a>
                       </li>

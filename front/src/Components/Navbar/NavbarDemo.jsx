@@ -19,7 +19,7 @@ function Navbar({ className }) {
 
   const handleNav = (path) => {
     navigate(path);
-    setMobileOpen(false); // referme le menu mobile après clic
+    setMobileOpen(false);
   };
 
   return (
@@ -29,9 +29,8 @@ function Navbar({ className }) {
         className
       )}
     >
-      {/* --- MOBILE NAVBAR (< md) --- */}
-      <div className="flex items-center justify-between md:hidden bg-[rgba(14,6,32,0.8)] rounded-[10px] px-4 py-3">
-        {/* Logo / titre simple (tu peux changer le texte) */}
+      {/* MOBILE NAV */}
+      <div className="flex items-center justify-between md:hidden bg-[rgba(14,6,32,0.8)] rounded-[10px] px-4 py-3 text-white">
         <button
           type="button"
           className="text-sm font-medium text-white"
@@ -40,12 +39,10 @@ function Navbar({ className }) {
           MENU
         </button>
 
-        {/* Bouton burger */}
         <button
           type="button"
           onClick={() => setMobileOpen((prev) => !prev)}
-          className="flex flex-col justify-center items-center space-y-[3px] focus:outline-none"
-          aria-label="Toggle navigation menu"
+          className="flex flex-col justify-center items-center space-y-[3px]"
         >
           <span
             className={cn(
@@ -68,64 +65,31 @@ function Navbar({ className }) {
         </button>
       </div>
 
-      {/* Menu mobile déroulé */}
       {mobileOpen && (
-        <div className="md:hidden mt-2 bg-[rgba(14,6,32,0.9)] rounded-[10px] px-4 py-3 space-y-2">
-          {/* ici on désactive complètement les hover/dropdowns avec disableHover */}
+        <div className="md:hidden mt-2 bg-[rgba(14,6,32,0.9)] rounded-[10px] px-4 py-3 space-y-2 text-white">
           <div className="flex flex-col gap-2">
-            {/* HOME */}
-            <MenuItem
-              setActive={() => {}}
-              active={null}
-              item="Home"
-              onClick={() => handleNav("/")}
-              disableHover
-            />
-
-            {/* EXPERIENCE */}
-            <MenuItem
-              setActive={() => {}}
-              active={null}
-              item="Experience"
-              onClick={() => handleNav("/experience")}
-              disableHover
-            />
-
-            {/* PROJECTS */}
-            <MenuItem
-              setActive={() => {}}
-              active={null}
-              item="Projects"
-              onClick={() => handleNav("/projects")}
-              disableHover
-            />
-
-            {/* GET IN TOUCH (CTA) */}
-            <MenuItem
-              setActive={() => {}}
-              active={null}
-              item="Get in touch"
-              onClick={() => handleNav("/contact")}
-              disableHover
-              className="contact-menu-item"
-            />
+            <MenuItem disableHover item="Home" className="text-white" onClick={() => handleNav("/")} />
+            <MenuItem disableHover item="Experience" className="text-white" onClick={() => handleNav("/experience")} />
+            <MenuItem disableHover item="Projects" className="text-white" onClick={() => handleNav("/projects")} />
+            <MenuItem disableHover item="Get in touch" className="text-white" onClick={() => handleNav("/contact")} />
           </div>
         </div>
       )}
 
-      {/* --- DESKTOP NAVBAR (md et +) --- */}
-      <div className="hidden md:block">
-        <Menu setActive={setActive}>
+      {/* DESKTOP NAV */}
+      <div className="hidden md:block text-white">
+        <Menu setActive={setActive} className="text-white">
           {/* HOME */}
           <MenuItem
             setActive={setActive}
             active={active}
             item="Home"
+            className="text-white"
             onClick={() => navigate("/")}
           >
-            <div className="flex flex-col space-y-4 text-[15px]">
-              <HoveredLink href="/#whoami">Who am I</HoveredLink>
-              <HoveredLink href="/#mygoals">My goals</HoveredLink>
+            <div className="flex flex-col space-y-4 text-[15px] text-white">
+              <HoveredLink href="/#whoami" className="text-white">Who am I</HoveredLink>
+              <HoveredLink href="/#mygoals" className="text-white">My goals</HoveredLink>
             </div>
           </MenuItem>
 
@@ -134,13 +98,14 @@ function Navbar({ className }) {
             setActive={setActive}
             active={active}
             item="Experience"
+            className="text-white"
             onClick={() => navigate("/experience")}
           >
-            <div className="flex flex-col space-y-4 text-[15px]">
-              <HoveredLink href="/experience#journey">
+            <div className="flex flex-col space-y-4 text-[15px] text-white">
+              <HoveredLink href="/experience#journey" className="text-white">
                 My journey into tech
               </HoveredLink>
-              <HoveredLink href="/experience#Jobs">
+              <HoveredLink href="/experience#Jobs" className="text-white">
                 Jobs & internships
               </HoveredLink>
             </div>
@@ -151,32 +116,37 @@ function Navbar({ className }) {
             setActive={setActive}
             active={active}
             item="Projects"
+            className="text-white"
             onClick={() => navigate("/projects")}
           >
-            <div className="text-[15px] grid grid-cols-2 gap-10 p-4">
+            <div className="text-[15px] text-white grid grid-cols-2 gap-10 p-4">
               <ProductItem
                 title="Portfolio"
                 href="/projects#portfolio"
-                src="https://assets.aceternity.com/demos/algochurn.webp"
+                src="/assets/broxw.png"
                 description="My main web projects."
+                className="text-white"
               />
               <ProductItem
                 title="Backend"
                 href="/projects#backend"
-                src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
+                src="/assets/ndata.png"
                 description="APIs & data pipelines."
+                className="text-white"
               />
               <ProductItem
                 title="Data / Visualizations"
                 href="/projects#data"
-                src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
+                src="/assets/myshop.jpg"
                 description="Charts & dashboards."
+                className="text-white"
               />
               <ProductItem
                 title="Creative / Games"
                 href="/projects#creative"
-                src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
+                src="./assets/scandinaves.png"
                 description="Unity, sound design, experiments."
+                className="text-white"
               />
             </div>
           </MenuItem>
@@ -186,14 +156,14 @@ function Navbar({ className }) {
             setActive={setActive}
             active={active}
             item="Get in touch"
-            onClick={() => navigate("/contact")}
             className="contact-menu-item"
+            onClick={() => navigate("/contact")}
           >
-            <div className="flex flex-col space-y-4 text-[15px]">
-              <HoveredLink href="/contact#contact">
+            <div className="flex flex-col space-y-4 text-[15px] text-white">
+              <HoveredLink href="/contact#contact" className="text-white">
                 Contact me
               </HoveredLink>
-              <HoveredLink href="/contact#CV">
+              <HoveredLink href="/contact#CV" className="text-white">
                 Download my CV
               </HoveredLink>
             </div>

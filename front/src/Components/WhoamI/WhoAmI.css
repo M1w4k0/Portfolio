@@ -38,7 +38,7 @@
   z-index:0;
 }
 .cc-who-figure{
-  margin-top:10rem;
+  margin-top:5%;
   z-index:1;                    
 }
 .cc-who-img{
@@ -53,7 +53,7 @@
   z-index: 2;
   padding: 0rem 4rem;
   color: var(--who-fg);
-  height: 40vh;
+  min-height: 40vh;
 
   /* >>> clé : on la tire vers le haut pour chevaucher l’image au chargement */
   margin-top: -40vh; /* ajuste si besoin */

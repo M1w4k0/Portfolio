@@ -29,7 +29,7 @@
 }
 
 .home-content h1 {
-  font-size: 13rem;
+  font-size: clamp(3rem, 12vw, 15rem);
   font-weight: 750;
   color: black;
   margin: 0;

@@ -12,10 +12,11 @@
   position: relative;
   background: var(--foot-bg);
   color: var(--foot-fg);
-  padding: 0 6%;
-  padding-top: 10%;
-  overflow: hidden;
-  height: 100vh;
+  padding: 8% 6% 4%;       /* un peu de padding bas en plus */
+  overflow: visible;        /* on NE coupe plus ce qui dépasse */
+  min-height: 100vh;        /* au lieu de height: 100vh */
+  display: flex;
+  flex-direction: column;   /* permet de stacker inner + bottom + brand */
 }
 
 .cc-foot-bg {
@@ -35,6 +36,7 @@
   column-gap: 6%;
   row-gap: 4%;
   align-items: flex-start;
+  flex: 1 0 auto;          /* 🟢 le bloc principal occupe la hauteur dispo */
 }
 
 
@@ -223,15 +225,16 @@
 }
 
 
-.cc-brand {
+.cc-foot-inner {
   position: relative;
-  font-size: 13vw;      
-  font-weight: 600;
-  color: #ffffff;
-  pointer-events: none;
-  line-height: 0.85;
-  z-index: 0;
-  margin-top:3%;
+  z-index: 1;
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 60%) minmax(0, 40%);
+  column-gap: 6%;
+  row-gap: 4%;
+  align-items: flex-start;
+  flex: 1 0 auto;          /* 🟢 le bloc principal occupe la hauteur dispo */
 }
 
 
@@ -254,18 +257,32 @@
   opacity: 0.8;
 }
 
+.cc-brand {
+  position: relative;
+  width: 100%;
+  text-align: left;
+  font-weight: 600;
+  color: #ffffff;
+  pointer-events: none;
+  line-height: 0.85;
+  font-size: min(15vw, 200px);
+  margin-top: 3rem;
+  z-index: 0;
+}
+
+
 /* ===========================
    RESPONSIVE
    =========================== */
 
 @media (max-width: 768px) {
-  .cc-foot {
-    min-height: 110vh;
+   .cc-foot {
+    min-height: auto;
+    padding: 3rem 1.5rem 2.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     width: 100%;
-    padding: 0;
   }
 
   .cc-foot-inner {
@@ -329,9 +346,11 @@
   .cc-brand {
     order: 3;
     text-align: center;
-    margin-top: 2.5rem;
-    font-size: 3.2rem;
+    /* PLUS GRAND QU'AVANT */
+    font-size: min(28vw, 120px);
+
     opacity: 0.08;
+    margin-top: 2rem;
   }
 
   .cc-foot-bottom {
@@ -362,8 +381,7 @@
 
 @media (max-width: 600px) {
   .cc-foot {
-    padding: 0rem 0;
-
+    padding: 2.5rem 1.2rem 2rem;
   }
 
   .cc-foot-cta {
@@ -371,7 +389,8 @@
   }
 
   .cc-brand {
-    font-size: 2.8rem;
+    font-size: min(32vw, 95px);
+    margin-top: 1.5rem;
   }
 
   .cc-foot-left {
