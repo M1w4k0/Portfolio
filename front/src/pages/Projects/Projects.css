@@ -2,16 +2,14 @@
 /*        SECTION READY      */
 /* ========================= */
 
-.ready {
-  position: relative;
-  min-height: 100vh;
-  background: #0e0620;
-  color: #ffffff;
-  padding: 6vh 6vw 6vh;
-  overflow: hidden;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-    "Helvetica Neue", Arial, sans-serif;
-}
+.ready { 
+  position: relative; 
+  min-height: 100vh; 
+  background: #0e0620; 
+  color: #ffffff; 
+  padding: 6vh 6vw 6vh; 
+  overflow: hidden; 
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif; }
 
 
 /* Gros titre à gauche */
@@ -77,16 +75,15 @@
 }
 
 /* Mot vertical à droite */
-.ready__sideword {
-  position: absolute;
-  right: -13px;
-  bottom: 65vh;
-  transform: rotate(-90deg);
-  transform-origin: bottom right;
-  font-size: 5.3rem;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-}
+.ready__sideword { 
+  position: absolute; 
+  right: -13px; 
+  bottom: 65%; 
+  transform: rotate(-90deg); 
+  transform-origin: bottom right; 
+  font-size: 3.8rem; 
+  font-weight: 800; 
+  letter-spacing: -0.03em; }
 
 /* ========================= */
 /*      PROJECTS / SLICE     */
@@ -153,7 +150,9 @@
   width: 100%;
   background: #f7f7f7;
   padding: 5rem;
-  height : 100vh;
+  /* height : 100vh;  ❌ à enlever */
+  min-height: 100vh;  /* au moins une hauteur d'écran */
+  height: auto;       /* mais peut grandir si le contenu est plus grand */
 }
 
 
@@ -309,11 +308,7 @@
     margin-top: 9vh;
   }
 
-  .ready__sideword {
-    right: -20px;
-    bottom: 12vh;
-    font-size: clamp(3.2rem, 6vw, 4rem);
-  }
+ .ready__sideword { right: -20px; bottom: 12vh; font-size: 3rem; }
 
   .cc-slice {
     gap: clamp(20px, 6vw, 80px);
@@ -337,6 +332,12 @@
     .gallery p {
     font-size: 1.3rem;
   }
+
+  .Fondmain {
+    padding: 3rem 1.5rem;
+    min-height: auto;  /* pas obligé de forcer 100vh ici */
+  }
+
 }
 
 
@@ -524,4 +525,10 @@
   margin-bottom: 1rem;
   margin-top: -1rem;
 }
+
+.Fondmain {
+    padding-bottom: 0;
+    padding: 1rem 1rem;
+    height: auto;
+  }
 }

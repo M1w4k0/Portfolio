@@ -121,31 +121,31 @@ function Navbar({ className }) {
           >
             <div className="text-[15px] text-white grid grid-cols-2 gap-10 p-4">
               <ProductItem
-                title="Portfolio"
+                title="YOWL"
                 href="/projects#portfolio"
                 src="/assets/broxw.png"
-                description="My main web projects."
-                className="text-white"
-              />
-              <ProductItem
-                title="Backend"
-                href="/projects#backend"
-                src="/assets/ndata.png"
-                description="APIs & data pipelines."
+                description="UGC review platform"
                 className="text-white"
               />
               <ProductItem
                 title="Data / Visualizations"
-                href="/projects#data"
-                src="/assets/myshop.jpg"
-                description="Charts & dashboards."
+                href="/projects#backend"
+                src="/assets/ndata.png"
+                description="Jupyter data anlysis"
                 className="text-white"
               />
               <ProductItem
-                title="Creative / Games"
+                title="Myshop website"
+                href="/projects#data"
+                src="/assets/myshop.jpg"
+                description="Fullstack & database managment"
+                className="text-white"
+              />
+              <ProductItem
+                title="CRM launch project"
                 href="/projects#creative"
                 src="./assets/scandinaves.png"
-                description="Unity, sound design, experiments."
+                description="Automation deployment"
                 className="text-white"
               />
             </div>
@@ -153,20 +153,10 @@ function Navbar({ className }) {
 
           {/* CONTACT */}
           <MenuItem
-            setActive={setActive}
-            active={active}
             item="Get in touch"
             className="contact-menu-item"
             onClick={() => navigate("/contact")}
           >
-            <div className="flex flex-col space-y-4 text-[15px] text-white">
-              <HoveredLink href="/contact#contact" className="text-white">
-                Contact me
-              </HoveredLink>
-              <HoveredLink href="/contact#CV" className="text-white">
-                Download my CV
-              </HoveredLink>
-            </div>
           </MenuItem>
         </Menu>
       </div>

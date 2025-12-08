@@ -1,12 +1,12 @@
 .contact-section {
+  position: relative;            /* 🔑 pour cc-case__num */
   background: #ffffff;
   color: #111111;
-  padding: 5% 0%;
   display: flex;
   justify-content: center;
-  height: 100vh;
-  padding-top: 15rem;
-
+  padding: 8rem 0 5rem;          /* padding plus simple */
+  min-height: 100vh;             /* au moins 100vh */
+  height: auto;                  /* ✅ peut grandir si le contenu dépasse */
 }
 
 .contact-container {
