@@ -26,14 +26,16 @@ const GlassIcons = ({ items, className }) => {
   };
 
   return (
-    <div className={`icon-btns ${className || ''}`}>
-      {items.map((item, index) => (
+  <div className={`icon-btns ${className || ''}`}>
+    {items.map((item, index) => (
+      <div key={index} className="icon-btn-wrapper">
+        <p className="icon-language">{item.language}</p> {/* ⬅️ NOUVEAU */}
+        
         <button
-          key={index}
           className={`icon-btn ${item.customClass || ''}`}
           aria-label={item.label}
           type="button"
-          onClick={() => handleDownload(item.file)}  // ⬅️ ACTION AU CLIC
+          onClick={() => handleDownload(item.file)}
         >
           <span className="icon-btn__back" style={getBackgroundStyle(item.color)}></span>
           <span className="icon-btn__front">
@@ -43,9 +45,11 @@ const GlassIcons = ({ items, className }) => {
           </span>
           <span className="icon-btn__label">{item.label}</span>
         </button>
-      ))}
-    </div>
-  );
+      </div>
+    ))}
+  </div>
+);
+
 };
 
 export default GlassIcons;

@@ -30,7 +30,7 @@ export default function WhoAmISection() {
           <aside className="cc-who-col cc-who-right">
             <ul>
               <li>ENTREPRENEUR</li>
-              <li>LUXURY HOSTESS</li>
+              <li> PREMIUM EVENT HOSTESS</li>
               <li>DATA ENTHUSIAST</li>
             </ul>
           </aside>

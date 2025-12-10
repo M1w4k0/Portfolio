@@ -6,7 +6,7 @@
   justify-content: center;
   padding: 8rem 0 5rem;          /* padding plus simple */
   min-height: 100vh;             /* au moins 100vh */
-  height: auto;                  /* ✅ peut grandir si le contenu dépasse */
+  height: auto;    
 }
 
 .contact-container {
@@ -15,6 +15,7 @@
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 1.3fr);
   column-gap: 5rem;
   align-items: flex-start;
+  margin-top: 8rem;
 }
 
 /* ===================== */

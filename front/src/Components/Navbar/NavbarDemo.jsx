@@ -68,10 +68,30 @@ function Navbar({ className }) {
       {mobileOpen && (
         <div className="md:hidden mt-2 bg-[rgba(14,6,32,0.9)] rounded-[10px] px-4 py-3 space-y-2 text-white">
           <div className="flex flex-col gap-2">
-            <MenuItem disableHover item="Home" className="text-white" onClick={() => handleNav("/")} />
-            <MenuItem disableHover item="Experience" className="text-white" onClick={() => handleNav("/experience")} />
-            <MenuItem disableHover item="Projects" className="text-white" onClick={() => handleNav("/projects")} />
-            <MenuItem disableHover item="Get in touch" className="text-white" onClick={() => handleNav("/contact")} />
+            <MenuItem
+              disableHover
+              item="Home"
+              className="text-white"
+              onClick={() => handleNav("/")}
+            />
+            <MenuItem
+              disableHover
+              item="Experience"
+              className="text-white"
+              onClick={() => handleNav("/experience")}
+            />
+            <MenuItem
+              disableHover
+              item="Projects"
+              className="text-white"
+              onClick={() => handleNav("/projects")}
+            />
+            <MenuItem
+              disableHover
+              item="Get in touch"
+              className="text-white"
+              onClick={() => handleNav("/contact")}
+            />
           </div>
         </div>
       )}
@@ -88,8 +108,8 @@ function Navbar({ className }) {
             onClick={() => navigate("/")}
           >
             <div className="flex flex-col space-y-4 text-[15px] text-white">
-              <HoveredLink href="/#whoami" className="text-white">Who am I</HoveredLink>
-              <HoveredLink href="/#mygoals" className="text-white">My goals</HoveredLink>
+              <HoveredLink href="/#whoami">Who am I</HoveredLink>
+              <HoveredLink href="/#mygoals">My goals</HoveredLink>
             </div>
           </MenuItem>
 
@@ -102,10 +122,10 @@ function Navbar({ className }) {
             onClick={() => navigate("/experience")}
           >
             <div className="flex flex-col space-y-4 text-[15px] text-white">
-              <HoveredLink href="/experience#journey" className="text-white">
+              <HoveredLink href="/experience#journey">
                 My journey into tech
               </HoveredLink>
-              <HoveredLink href="/experience#Jobs" className="text-white">
+              <HoveredLink href="/experience#Jobs">
                 Jobs & internships
               </HoveredLink>
             </div>
@@ -122,31 +142,27 @@ function Navbar({ className }) {
             <div className="text-[15px] text-white grid grid-cols-2 gap-10 p-4">
               <ProductItem
                 title="YOWL"
-                href="/projects#portfolio"
+                href="/projects#project-1"
                 src="/assets/broxw.png"
                 description="UGC review platform"
-                className="text-white"
               />
               <ProductItem
                 title="Data / Visualizations"
-                href="/projects#backend"
+                href="/projects#project-2"
                 src="/assets/ndata.png"
-                description="Jupyter data anlysis"
-                className="text-white"
+                description="Jupyter data analysis"
               />
               <ProductItem
                 title="Myshop website"
-                href="/projects#data"
+                href="/projects#project-3"
                 src="/assets/myshop.jpg"
-                description="Fullstack & database managment"
-                className="text-white"
+                description="Fullstack & database management"
               />
               <ProductItem
                 title="CRM launch project"
-                href="/projects#creative"
+                href="/projects#project-4"
                 src="./assets/scandinaves.png"
                 description="Automation deployment"
-                className="text-white"
               />
             </div>
           </MenuItem>
@@ -156,8 +172,7 @@ function Navbar({ className }) {
             item="Get in touch"
             className="contact-menu-item"
             onClick={() => navigate("/contact")}
-          >
-          </MenuItem>
+          />
         </Menu>
       </div>
     </div>

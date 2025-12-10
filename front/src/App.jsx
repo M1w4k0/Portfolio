@@ -47,6 +47,11 @@ function Layout({ children }) {
 }
 
 function App() {
+
+  const location = useLocation();      
+  const [isLoading, setIsLoading] = useState(location.pathname === "/");
+  const [hasVisitedHome, setHasVisitedHome] = useState(false);
+
   // Smooth scroll Lenis
   useEffect(() => {
     const lenis = new Lenis();
@@ -59,16 +64,32 @@ function App() {
     requestAnimationFrame(raf);
   }, []);
 
-  // Preloader
-  const [isLoading, setIsLoading] = useState(true);
-
+  // PRELOADER LOGIC — plays ONLY on first visit to "/"
   useEffect(() => {
-    setTimeout(() => {
+    // Si on n'est PAS sur "/", on ne montre jamais le preloader
+    if (location.pathname !== "/") {
       setIsLoading(false);
+      return;
+    }
+
+    // Si on a déjà visité la home, on ne rejoue pas le preloader
+    if (hasVisitedHome) {
+      setIsLoading(false);
+      return;
+    }
+
+    // Première visite sur "/"
+    setIsLoading(true);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+      setHasVisitedHome(true); // flag "home déjà vue"
       document.body.style.cursor = "default";
       window.scrollTo(0, 0);
     }, 2000);
-  }, []);
+
+    return () => clearTimeout(timer);
+  }, [location.pathname, hasVisitedHome]);
+
 
   return (
     <>

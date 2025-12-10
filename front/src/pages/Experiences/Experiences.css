@@ -272,6 +272,26 @@
   letter-spacing: 0.02em;
   font-size: clamp(22px, 2vw, 28px);
 }
+
+.tp-title-row {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.tp-logo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  border-radius: 4px; /* carré arrondi propre */
+  flex-shrink: 0;
+  opacity: 0.8;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+
+
+
 .tp-desc {
   margin: 0;
   color: #333;
@@ -568,6 +588,12 @@
 
   .tp-title {
     font-size: 1rem;
+  }
+
+  .tp-logo {
+    width: 65px;
+    height: 65px;
+    margin-bottom: 23px;
   }
 
   .tp-desc {

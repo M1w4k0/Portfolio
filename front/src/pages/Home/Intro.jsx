@@ -21,7 +21,7 @@ const words = paragraph.split(" ")
           </div>
           <a
             className="tag tag-linkedin"
-            href="www.linkedin.com/in/zoe-charrier"
+            href="https://www.linkedin.com/in/zoe-charrier/"
             target="_blank"
             rel="noopener noreferrer"
           >

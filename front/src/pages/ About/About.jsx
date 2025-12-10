@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import WhoAmISection from '../../Components/WhoamI/WhoAmI':
+import WhoAmISection from '../../Components/WhoamI/WhoAmI'
 
 export default function About() {
 

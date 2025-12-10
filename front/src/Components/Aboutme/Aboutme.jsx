@@ -8,8 +8,8 @@ import { IoIosDownload } from "react-icons/io";
 const paragraph = "So I do what I always do when direction isn’t given : I build it.";
 
 const items = [
-  { icon: <IoIosDownload />, color: 'blue', label: 'French', file: '/cv-fr.pdf'   },
-  { icon: <IoIosDownload />, color: 'purple', label: 'English', file: '/cv-eng.pdf'   },
+  { icon: <IoIosDownload />, color: 'blue', language: "French", file: '/cv-fr.pdf'   },
+  { icon: <IoIosDownload />, color: 'purple', language: "English", file: '/cv-eng.pdf'   },
 ];
 
 export default function Aboutme() {
@@ -132,6 +132,10 @@ export default function Aboutme() {
                     My focus: analytics, product insights, and beautiful ways to communicate
                     what matters.
                   </p>
+                  <p>
+                    I also joined NEOMA’s Data & Tech association to stay immersed in a community
+                    that learns, experiments, and builds with purpose.
+                  </p>
                 </div>
 
                 <div className="sc-foot">
@@ -163,9 +167,9 @@ export default function Aboutme() {
         <div className="fc-left">
 
           <h1 className="fc-title">
-            THE NEXT
+            DOWNLOAD
             <br />
-            STEP
+            MY CV
           </h1>
 
           <p className="fc-sub">
@@ -182,10 +186,6 @@ export default function Aboutme() {
 
         {/* Colonne droite : visuel 3D */}
         <div className="fc-right">
-
-          <div className="fc-lang-label">
-            <strong>Click here to download my CV :</strong>
-          </div>
           
           <div style={{ height: '250px', position: 'relative' }}>
             <GlassIcons items={items} className="custom-class"/>

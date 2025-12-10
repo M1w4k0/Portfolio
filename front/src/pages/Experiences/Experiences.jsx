@@ -18,25 +18,23 @@ const panels = [
   {
     num: "01",
     title: "ORANGE - APR 2020",
+    logo: "./assets/Orangelogo.png",
+    url: "https://www.orange.com",          // 👈 NEW
     desc:
       "This first experience gave me my initial exposure to Profesional world and real responsibilities — enough to spark my interest in tech & innovation.",
     content:
-       "- Research project in operational marketing\n" +
+      "- Research project in operational marketing\n" +
       "- Introduction to the world of data\n" +
       "- Foundations of telecommunication networks\n\n" +
       "**This experience sparked my curiosity for the hidden logic of tech and the world of innovation.**",
-      
-
-
-
-
-
     img: "./assets/orange.jpg",
     alt: "Intro message",
   },
   {
     num: "02",
     title: "NEOMA - SEPT 2023 to JUN 2028",
+    logo: "./assets/NEOMAlogo.png",
+    url: "https://neoma-bs.com",            // 👈 NEW
     desc:
       "Joining NEOMA pushed me to connect creativity and technology every day. I learned to build ideas that actually work — not just concepts on paper.",
     content:
@@ -51,6 +49,8 @@ const panels = [
   {
     num: "03",
     title: "DSD - JAN 2024 to NOW",
+    logo: "./assets/dsdlogo.png",
+    url: "https://www.dsdorganisation.com/",                  // 👈 à ajuster si besoin
     desc:
       "At DSD, I learned to manage teams, handle fast-paced situations, and keep a professional mindset even under pressure.",
     content:
@@ -64,6 +64,8 @@ const panels = [
   {
     num: "04",
     title: "MALAKOFF HUMANIS - APR to JUN 2024",
+    logo: "./assets/Malakofflogo.jpg",
+    url: "https://www.malakoffhumanis.com", // 👈 NEW
     desc:
       "This internship taught me how data and marketing work together — from benchmarking competitors to improving visibility and content.",
     content:
@@ -77,6 +79,8 @@ const panels = [
   {
     num: "05",
     title: "EPITECH - OCT 2024 to FEB 2025",
+    logo: "./assets/Epitechlogo.png",
+    url: "https://www.epitech.eu",          // 👈 NEW
     desc:
       "Epitech boosted my technical skills fast — coding, data, SQL, and real projects like analytics tools and recommendation systems.",
     content:
@@ -90,6 +94,8 @@ const panels = [
   {
     num: "06",
     title: "VENTE UNIQUE - JUNE to DEC 2025",
+    logo: "./assets/venteuniquelogo.png",
+    url: "https://www.vente-unique.com",    // 👈 NEW
     desc:
       "I worked on CRM and customer data, automating dashboards and supporting teams to optimize campaigns and product decisions.",
     content:
@@ -104,6 +110,8 @@ const panels = [
   {
     num: "07",
     title: "QUEENS - JAN to MAY 2026",
+    logo: "./assets/Queenslogo.avif",
+    url: "https://www.queensu.ca",          // 👈 ou autre si c’est Queen’s Belfast
     desc:
       "My exchange at Queen’s will deepen my skills in data science and AI — helping me grow technically and approach problems with a more global mindset.",
     content:
@@ -203,7 +211,24 @@ const panels = [
                         aria-expanded={isOpen}
                         onClick={() => setOpenIndex(isOpen ? null : i)}
                       >
-                        <h3 className="tp-title">{p.title}</h3>
+                       <div className="tp-title-row">
+                          <h3 className="tp-title">{p.title}</h3>
+
+                              {p.url ? (
+                                <a
+                                  href={p.url}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  className="tp-logo-link"
+                                  aria-label={`Visit ${p.title} website`}
+                                  onClick={(e) => e.stopPropagation()} // évite de toggler le panel au clic sur le logo
+                                >
+                                  <img src={p.logo} alt="" className="tp-logo" />
+                                </a>
+                              ) : (
+                                <img src={p.logo} alt="" className="tp-logo" />
+                              )}
+                            </div>
                         <p className="tp-desc">{p.desc}</p>
                       </button>
 

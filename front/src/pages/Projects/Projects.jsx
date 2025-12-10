@@ -11,12 +11,12 @@ import Projet4 from "../../Components/Projetpres/Projet4";
 
 export default function Projectsoff() {
   
-   const signs = [
-    "Building tools that scrape, clean, and structure real-world data from scratch.",
-    "Designing full-stack features — from database logic to interactive front-end interfaces.",
-    "Exploring machine learning through prediction models, recommendation systems, and analytics.",
-    "Creating projects that blend data, UX, and automation to solve practical, real problems.",
-  ];
+ const signs = [
+  "Building a modern UGC review platform with custom UI and routing.",
+  "Turning raw business data into clean insights and detailed visuals.",
+  "Developing a full dynamic e-commerce site with secure features.",
+  "Deploying an efficient CRM workflow for a Scandinavian product launch.",
+];
 
   const projects = [
   {
