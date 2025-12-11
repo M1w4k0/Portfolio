@@ -43,6 +43,12 @@ export default function Projectsoff() {
     title2: "scandinavian launch",
     src: "../assets/scandinaves2.png",
     anchor: "#project-4"
+  },
+  {
+    title1: "Machine learning ",
+    title2: "certification",
+    src: "../assets/ML.jpg",
+    anchor: "#project-5"
   }
 ];
 
