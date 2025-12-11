@@ -40,14 +40,14 @@ export default function Projet2() {
           <p className="hero-description">
             In this project, I worked on a real-world business dataset to extract
             strategic insights, build predictive models, and translate the results
-            into clear recommendations.
+            into clear recommendations. The core question was how customers behave toward organic products.
             <br /><br />
             Using Python and Jupyter Notebook, I explored the data (cleaning,
             feature engineering, descriptive statistics), then tested several
             models such as linear regression, Random Forest and K-Means
-            clustering. The goal was to identify patterns, segment the data,
+            clustering to make some predictions. The goal was to identify patterns, segment the data,
             and simulate scenarios that help decision-makers prioritise actions
-            and understand business impact.
+            and finally understand business impact.
           </p>
 
           {/* SKILLS ACQUIRED EN BAS À DROITE */}

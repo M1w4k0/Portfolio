@@ -15,13 +15,12 @@ function BreakthroughBlock1() {
       </div>
       <div className="cc-rightside">
       <h2 className="cc-par-quote-title">
-        <strong>2020.</strong> For the first time, I got to see how a major tech company really worked — 
-        the networks, the systems, the hidden logic that keeps everything running.
+        <strong>2020.</strong> For the first time, I got to see how a major tech company really worked:
+        the networks, the systems, big data and the hidden logic that keeps everything running.
       </h2>
 
       <p className="cc-par-quote-top">
-          I didn’t understand much yet, but I was fascinated by the invisible structure behind it all: 
-          how data, cables, and people came together to make things possible. That’s when I first felt my curiosity 
+          I didn’t understand much yet, but I was fascinated by the invisible structure behind it all. That’s when I first felt my curiosity 
           spark for technology and innovation.
       </p>
       </div>
@@ -35,7 +34,7 @@ function BreakthroughBlock2() {
     <section className="cc-par-quote">
       <div className="dot">
        <span className="cc-par-quote-dot" />
-       <p className="cc-little">Neoma Student</p>
+       <p className="cc-little">NEOMA Student</p>
 
       </div>
       <div className="cc-rightside">
@@ -45,9 +44,9 @@ function BreakthroughBlock2() {
       </h2>
 
       <p className="cc-par-quote-top">
-          Through courses in information systems, CRM, strategy, and design, I discovered what really fascinated me: 
-          data — the way numbers can explain, predict, and inspire. I also joined the Digital & Tech Association, 
-          where I started coding out of curiosity... and ended up finding a passion.
+          Through courses in information systems, CRM, strategy, and even design, I discovered the opportunities linked with the world of data,
+          the way numbers can explain, predict, and inspire, throught all types of fields. So I recently joined the new Digital & Tech Association, 
+          where I could share this passion with people as ambitious as me.
       </p>
       </div>
       </section>
@@ -69,9 +68,9 @@ function BreakthroughBlock3() {
       </h2>
 
       <p className="cc-par-quote-top">
-           Within months, I built a data analysis web platform and a personalized recommendation system for e-commerce.
+           Within months, I followed an intensive program, during which I had to build a data analysis web platform and a personalized recommendation system for e-commerce.
            It was the first time I truly saw how code and data could work together to bring ideas to life.
-           That’s when I realized I wanted to work in data, but always with purpose and meaning behind the numbers.    
+           That’s when I realized I wanted to make my career in data science.    
       </p>
       </div>
       </section>

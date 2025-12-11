@@ -5,7 +5,7 @@ import './Aboutme.css';
 import { IoIosDownload } from "react-icons/io";
 
 
-const paragraph = "So I do what I always do when direction isn’t given : I build it.";
+const paragraph = "What I always do when direction isn’t given : I build it.";
 
 const items = [
   { icon: <IoIosDownload />, color: 'blue', language: "French", file: '/cv-fr.pdf'   },
@@ -88,8 +88,8 @@ export default function Aboutme() {
                 <h2 className="sc-head">A NEW GAP</h2>
                 <div className="sc-body">
                   <p>
-                    In Paris, I joined a strong athletics club, and learned real discipline. I also had the chance to study at EPIN, one of the top high schools in France 
-                    — a place that pushed me to aim higher.
+                    In Paris, I joined a strong athletics club, and learned real discipline. I also had the chance to study at EPIN, one of the top high schools in France,
+                    a place that pushed me to aim higher.
                   </p>
                   <p>
                     After graduating with honors, I choosed to study at NEOMA BS: a business program with a strong tech focus.
@@ -97,7 +97,7 @@ export default function Aboutme() {
                   </p>
                   <p>
                     My interests became clearer: I like connecting strategy,
-                    numbers, and human behavior — using data and AI to make better decisions
+                    numbers, and human behavior, using data and AI to make better decisions
                     and build useful systems.
                   </p>
                 </div>
@@ -108,7 +108,7 @@ export default function Aboutme() {
                 </div>
 
                 <blockquote className="sc-quote">
-                  Discipline builds performance. Insights build direction.
+                  For me, discipline builds performance, and insights build direction.
                 </blockquote>
               </div>
             </div>
@@ -121,7 +121,7 @@ export default function Aboutme() {
                 <h2 className="sc-head">WHERE I’M HEADING</h2>
                 <div className="sc-body">
                   <p>
-                    Today, I’m growing into roles that mix strategy, data, and AI — exactly where my
+                    Today, I’m growing into roles that mix strategy, data, and AI, exactly where my
                     curiosity naturally led me.
                   </p>
                   <p>

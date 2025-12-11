@@ -28,7 +28,7 @@ export default function Projet1() {
         <div className="hero-right">
           <div className="hero-main-text">
             <h1>
-              YOWL — A USER-GENERATED<br />
+              YOWL, A USER-GENERATED<br />
               REVIEW PLATFORM
             </h1>
             <h2>
@@ -47,8 +47,8 @@ export default function Projet1() {
             <br /><br />
             Behind the interface, I focused on data structure and analysis:
             modelling entities (users, companies, reviews), tracking activity,
-            and preparing the project so it can later feed scoring models,
-            dashboards, or recommendation systems for business use.
+            and preparing the project so it could later feed scoring models,
+            dashboards, or recommendation systems for business use. the website is not online for now.
           </p>
 
           {/* SKILLS ACQUIRED EN BAS À DROITE */}

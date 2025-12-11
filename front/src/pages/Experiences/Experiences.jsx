@@ -6,7 +6,7 @@ import ParallaxPage from "../../Components/ParallaxPage/ParallaxDemo.jsx";
 import Character from '../../Components/BlurText/Character2';
 
 
-const paragraph = "Today, I use what I learned almost every day — working, studying, and making decisions with a sense of purpose that grew from all those moments, even the unexpected ones."
+const paragraph = "Today, I use what I learned almost every day: working, studying, and making decisions with a sense of purpose that grew from all those moments, even the unexpected ones."
 
 
 export default function Experiences() {
@@ -21,12 +21,12 @@ const panels = [
     logo: "./assets/Orangelogo.png",
     url: "https://www.orange.com",          // 👈 NEW
     desc:
-      "This first experience gave me my initial exposure to Profesional world and real responsibilities — enough to spark my interest in tech & innovation.",
+      "This first experience gave me my initial exposure to profesional world and real responsibilities, enough to spark my interest in tech & innovation",
     content:
-      "- Research project in operational marketing\n" +
-      "- Introduction to the world of data\n" +
+      "- Research project in IA and Bigdata \n" +
+      "- Introduction to the LPWA & LoRa technologies" +
       "- Foundations of telecommunication networks\n\n" +
-      "**This experience sparked my curiosity for the hidden logic of tech and the world of innovation.**",
+      "",
     img: "./assets/orange.jpg",
     alt: "Intro message",
   },
@@ -36,11 +36,11 @@ const panels = [
     logo: "./assets/NEOMAlogo.png",
     url: "https://neoma-bs.com",            // 👈 NEW
     desc:
-      "Joining NEOMA pushed me to connect creativity and technology every day. I learned to build ideas that actually work — not just concepts on paper.",
+      "Joining NEOMA pushed me to connect creativity and technology every day. I learned to build ideas that actually work, not just concepts on paper.",
     content:
       "- Courses in information systems, CRM, design and strategy\n" +
-      "- Specialisation in Consulting, SQL and Database Management\n" +
-      "- Double degree with CentraleSupélec\n" +
+      "- A future Specialisation in consulting, SQL and database management\n" +
+      "- A future double degree with CentraleSupélec\n" +
       "- Involvement in a digital & tech association\n\n" +
       "**NEOMA strengthened my analytical thinking and my ability to bridge business and technology.**",
     img: "./assets/neoma.webp",
@@ -67,7 +67,7 @@ const panels = [
     logo: "./assets/Malakofflogo.jpg",
     url: "https://www.malakoffhumanis.com", // 👈 NEW
     desc:
-      "This internship taught me how data and marketing work together — from benchmarking competitors to improving visibility and content.",
+      "This internship taught me how data and marketing work together, from benchmarking competitors to improving visibility and content.",
     content:
       "- Benchmarking of insurance and health competitors\n" +
       "- SEO and visibility optimisation\n" +
@@ -82,7 +82,7 @@ const panels = [
     logo: "./assets/Epitechlogo.png",
     url: "https://www.epitech.eu",          // 👈 NEW
     desc:
-      "Epitech boosted my technical skills fast — coding, data, SQL, and real projects like analytics tools and recommendation systems.",
+      "Epitech boosted my technical skills fast : coding, data, SQL, and real projects like analytics tools and recommendation systems.",
     content:
       "- Training in Python, SQL, databases and web development\n" +
       "- Development of an open-data analysis platform\n" +
@@ -109,17 +109,17 @@ const panels = [
   },
   {
     num: "07",
-    title: "QUEENS - JAN to MAY 2026",
+    title: "QUEEN'S UNIVERSITY - JAN to MAY 2026",
     logo: "./assets/Queenslogo.avif",
     url: "https://www.queensu.ca",          // 👈 ou autre si c’est Queen’s Belfast
     desc:
-      "My exchange at Queen’s will deepen my skills in data science and AI — helping me grow technically and approach problems with a more global mindset.",
+      "My exchange at Queen’s University will deepen my skills in data science and AI, helping me grow technically and approach problems with a more global mindset.",
     content:
       "- AI coding for business\n" +
       "- Data management and analytics\n" +
       "- Data science fundamentals\n" +
       "- Negotiation and behavioural sciences\n\n" +
-      "**This exchange will enhance my data science skills and my ability to work in an international context.**",
+      "",
     img: "./assets/queens.webp",
     alt: "Strategic discussion",
   },
@@ -132,15 +132,11 @@ const panels = [
         <section className="cc-case">
           <div className="cc-case__num">( 02 )</div>
 
-          <div className="cc-case__tag">
-            <span className="cc-dot" /> Cut Through. Move Forward.
-          </div>
-
           <h2 className="cc-case__title">Discover my <br/>journey</h2>
 
           <div className="cc-case__body">
             <p className="cc-lead">
-              I used to think my experiences in companies, projects, and travels had nothing to do with each other — 
+              I used to think my experiences in companies, projects, and travels had nothing to do with each other :
               just separate chapters I was collecting along the way.
             </p>
             <p>
@@ -157,7 +153,7 @@ const panels = [
 
         <section className="cc-fullstory" id="Jobs">
           <p className="cc-fullstory-kicker">
-            To understand why I work the way I do, you need to know where it all began.
+           Here is the complete journey I've lived to this day through educational, proffessional and international experiences.
           </p>
 
           <h2 className="cc-fullstory-title">
@@ -179,7 +175,7 @@ const panels = [
 
             <div className="tp-right">
               <p className="tp-intro-italic">
-                To make it clearer, here’s a short recap of the key experiences that built my skills, my goals, and the way I work today.
+                To make it clearer, here’s a short recap of the key experiences that built my skills & my goals. You can hover the items to fetch more content.
               </p>
             </div>
           </div>

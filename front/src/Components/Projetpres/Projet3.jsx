@@ -27,7 +27,7 @@ export default function Projet1() {
         <div className="hero-right">
           <div className="hero-main-text">
             <h1>
-              MYSHOP —<br />
+              MYSHOP, <br />
               E-COMMERCE WEBSITE
             </h1>
             <h2>
@@ -37,8 +37,8 @@ export default function Projet1() {
           </div>
 
           <p className="hero-description">
-            MyShop is an end-to-end e-commerce project where I designed both the
-            user experience and the server-side logic. I modelled the database
+            MyShop is an end-to-end e-commerce group project where we designed both the
+            user experience and the server-side logic. we modelled the database
             in MySQL (users, products, categories, cart) with foreign keys and
             clean relationships, then connected it to a PHP backend using PDO.
             <br /><br />

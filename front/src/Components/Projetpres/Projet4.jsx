@@ -28,7 +28,7 @@ export default function Projet2() {
         <div className="hero-right">
           <div className="hero-main-text">
             <h1>
-              CRM PROJECT —<br />
+              CRM PROJECT, <br />
              SCANDINAVIAN LAUNCH
             </h1>
             <h2>
@@ -38,12 +38,12 @@ export default function Projet2() {
           </div>
 
           <p className="hero-description">
-            For the Scandinavian expansion of Vente-Unique, I was responsible 
+            For the Scandinavian expansion of Vente-Unique, I was in part, responsible 
             for the full rollout of CRM communications across three new markets: 
             Sweden, Denmark and Norway.  
             <br /><br />
-            I coordinated the creation of all email and push assets, managed the 
-            translation workflows, built templates in Dartagnan, and deployed 
+            I helped to coordinate the creation of all email and push assets, to manage the 
+            translation workflows, to built templates in Dartagnan, and to deploy
             their automated versions in Emarsys—from abandoned carts to 
             welcome flows, loyalty programs, and reactivation journeys.
             <br /><br />
