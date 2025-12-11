@@ -7,7 +7,7 @@ import Projet2 from "../../Components/Projetpres/Projet2";
 import Projet3 from "../../Components/Projetpres/Projet3";
 import Projet4 from "../../Components/Projetpres/Projet4";
 import Projet5 from "../../Components/Projetpres/Projet5";
-
+import Projet6 from "../../Components/Projetpres/Projet6";
 
 
 export default function Projectsoff() {
@@ -49,6 +49,12 @@ export default function Projectsoff() {
     title2: "certification",
     src: "../assets/ML.jpg",
     anchor: "#project-5"
+  },
+  {
+    title1: "Snack'Up ",
+    title2: "startup challenge",
+    src: "../assets/snack1.png",
+    anchor: "#project-6"
   }
 ];
 
@@ -99,7 +105,7 @@ export default function Projectsoff() {
      {/* <div className='fond'></div> */}
     <Projet4 />
     <Projet5 />
-
+   <Projet6 />
 
     <div className="projects" id="projects">
       {/* <HorizontalScroll /> */}

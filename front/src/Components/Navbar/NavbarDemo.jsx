@@ -131,7 +131,7 @@ function Navbar({ className }) {
             </div>
           </MenuItem>
 
-          {/* PROJECTS */}
+          {/* PROJECTS – now same style as others, list of links */}
           <MenuItem
             setActive={setActive}
             active={active}
@@ -139,31 +139,25 @@ function Navbar({ className }) {
             className="text-white"
             onClick={() => navigate("/projects")}
           >
-            <div className="text-[15px] text-white grid grid-cols-2 gap-10 p-4">
-              <ProductItem
-                title="YOWL"
-                href="/projects#project-1"
-                src="/assets/broxw.png"
-                description="UGC review platform"
-              />
-              <ProductItem
-                title="Data / Visualizations"
-                href="/projects#project-2"
-                src="/assets/ndata.png"
-                description="Jupyter data analysis"
-              />
-              <ProductItem
-                title="Myshop website"
-                href="/projects#project-3"
-                src="/assets/myshop.jpg"
-                description="Fullstack & database management"
-              />
-              <ProductItem
-                title="CRM launch project"
-                href="/projects#project-4"
-                src="./assets/scandinaves.png"
-                description="Automation deployment"
-              />
+            <div className="flex flex-col space-y-4 text-[15px] text-white">
+              <HoveredLink href="/projects#project-1">
+                YOWL – UGC review platform
+              </HoveredLink>
+              <HoveredLink href="/projects#project-2">
+                Data & visualisations – Jupyter analysis
+              </HoveredLink>
+              <HoveredLink href="/projects#project-3">
+                MyShop – full-stack e-commerce
+              </HoveredLink>
+              <HoveredLink href="/projects#project-4">
+                CRM launch – Scandinavian markets
+              </HoveredLink>
+              <HoveredLink href="/projects#project-5">
+                Linear algebra for ML – Coursera
+              </HoveredLink>
+              <HoveredLink href="/projects#project-6">
+                Snack’Up – Startup Challenge
+              </HoveredLink>
             </div>
           </MenuItem>
 
