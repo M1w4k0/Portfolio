@@ -129,12 +129,12 @@ export default function Aboutme() {
                     about craft and clarity. Learn fast, ship well, keep improving.
                   </p>
                   <p>
-                    My focus: analytics, product insights, and beautiful ways to communicate
-                    what matters.
+                    That’s why I plan to follow a specialization in IS Consulting / Database Management & SQL at NEOMA, and obtain 
+                    the double degree *MSc & Technology for Business* with CentraleSupélec (my current major goal).
                   </p>
                   <p>
                     I also joined NEOMA’s Data & Tech association to stay immersed in a community
-                    that learns, experiments, and builds with purpose.
+                    that learns, experiments, and share same ambitions.
                   </p>
                 </div>
 
@@ -178,8 +178,7 @@ export default function Aboutme() {
 
           <div className="fc-copy">
             <p className="fc-text">
-              If you’re looking to understand the progression behind my skills, the roles I’ve taken, the challenges I’ve solved, 
-              and the direction I’m heading next: my CV tells the entire story with clarity.
+              If you’re looking to understand the progression behind my skills, or remember my journey: my CV tells the entire story with clarity.
             </p>
           </div>
         </div>

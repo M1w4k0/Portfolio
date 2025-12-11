@@ -38,14 +38,13 @@ export default function Projet2() {
           </div>
 
           <p className="hero-description">
-            For the Scandinavian expansion of Vente-Unique, I was in part, responsible 
+            For the Scandinavian expansion of Vente-Unique, I was partly responsible
             for the full rollout of CRM communications across three new markets: 
             Sweden, Denmark and Norway.  
             <br /><br />
-            I helped to coordinate the creation of all email and push assets, to manage the 
-            translation workflows, to built templates in Dartagnan, and to deploy
-            their automated versions in Emarsys—from abandoned carts to 
-            welcome flows, loyalty programs, and reactivation journeys.
+            I helped coordinate the creation of all email and push assets, manage translation workflows, 
+            build templates in Dartagnan, and deploy their automated versions in Emarsy (from abandoned carts to 
+            welcome flows, loyalty programs, and reactivation journeys).
             <br /><br />
             This project required strong cross-team collaboration (studio design, 
             translators, product, CRM, tech), precise planning, and technical rigor 

@@ -6,6 +6,7 @@ import Projet1 from "../../Components/Projetpres/Projet1";
 import Projet2 from "../../Components/Projetpres/Projet2";
 import Projet3 from "../../Components/Projetpres/Projet3";
 import Projet4 from "../../Components/Projetpres/Projet4";
+import Projet5 from "../../Components/Projetpres/Projet5";
 
 
 
@@ -91,6 +92,7 @@ export default function Projectsoff() {
     <Projet3 />
      {/* <div className='fond'></div> */}
     <Projet4 />
+    <Projet5 />
 
 
     <div className="projects" id="projects">
