@@ -146,7 +146,7 @@ export default function Contact() {
                       : "Send request"}
                   </button>
                    <a
-                    href="/assets/CV_Zoe_Bertrand.pdf"   // 👉 change le chemin/nom si besoin
+                    href="/assets/CVZoeCharrierENG.pdf"   // 👉 change le chemin/nom si besoin
                     download
                     className="cv-btn"
                   >
@@ -171,7 +171,7 @@ export default function Contact() {
             {/* Rule 1 */}
             <article className="rule-card">
               <h3 className="rule-title">6-month internship</h3>
-              <p className="rule-subtitle">Starting September 2027</p>
+              <p className="rule-subtitle">Starting May 2027</p>
               <div className="rule-divider" />
               <p className="rule-text">
                 I’m looking for a 6-month internship where I can work at the crossroads of data, product and strategy. 

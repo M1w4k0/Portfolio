@@ -8,8 +8,8 @@ import { IoIosDownload } from "react-icons/io";
 const paragraph = "What I always do when direction isn’t given : I build it.";
 
 const items = [
-  { icon: <IoIosDownload />, color: 'blue', language: "French", file: '/cv-fr.pdf'   },
-  { icon: <IoIosDownload />, color: 'purple', language: "English", file: '/cv-eng.pdf'   },
+  { icon: <IoIosDownload />, color: 'blue', language: "French", file: '/assets/CVZoeCharrierFR.pdf'   },
+  { icon: <IoIosDownload />, color: 'purple', language: "English", file: '/assets/CVZoeCharrierENG.pdf'   },
 ];
 
 export default function Aboutme() {
@@ -52,19 +52,18 @@ export default function Aboutme() {
                 <h2 className="sc-head">WHEN DREAMS START<br />SMALL</h2>
                 <div className="sc-body">
                   <p>
-                    I grew up near Angers, in a small town where life was mostly nature,
-                    school, and sports. I didn’t have access to many activities, but I learned
-                    to keep myself busy and creative.
+                    I grew up near Angers, in a small town where my days were shaped by nature,
+                    school, and sports. With a simple environment, I learned early on how to stay
+                    curious, creative, and resourceful.
                   </p>
                   <p>
-                    Spending a lot of time on my own pushed me to work independently,
-                    dive deep into what I was curious about, and constantly find new ideas
-                    so I’d never get bored.
+                    Having time to myself helped me develop strong independence, focus deeply on
+                    what interested me, and continuously explore new ideas driven by curiosity.
                   </p>
                   <p>
-                    In 3ème, everything changed when I moved to Paris to live with my dad.
-                    New city, no real landmarks, and suddenly a world full of opportunities
-                    I had never seen before.
+                    In 3ème, everything shifted when I moved to Paris to live with my dad.
+                    A new city, new surroundings, and suddenly a much wider world opened up,
+                    full of opportunities and perspectives I was eager to discover.
                   </p>
                 </div>
 
@@ -74,7 +73,7 @@ export default function Aboutme() {
                 </div>
 
                 <blockquote className="sc-quote">
-                  I know what it feels like to start small, feel limited, and still decide to build
+                  I know what it feels like to start small, and still decide to build
                   something bigger for myself.
                 </blockquote>
               </div>

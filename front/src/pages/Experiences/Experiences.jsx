@@ -21,10 +21,10 @@ const panels = [
     logo: "./assets/Orangelogo.png",
     url: "https://www.orange.com",          // 👈 NEW
     desc:
-      "This first experience gave me my initial exposure to profesional world and real responsibilities, enough to spark my interest in tech & innovation",
+      "This first internship opened the doors to the profesional world for me, by working alongside teams taking on real responsibilities, enough to spark my interest in tech & innovation",
     content:
       "- Research project in IA and Bigdata \n" +
-      "- Introduction to the LPWA & LoRa technologies" +
+      "- Introduction to the LPWA & LoRa technologies\n" +
       "- Foundations of telecommunication networks\n\n" +
       "",
     img: "./assets/orange.jpg",
@@ -36,7 +36,7 @@ const panels = [
     logo: "./assets/NEOMAlogo.png",
     url: "https://neoma-bs.com",            // 👈 NEW
     desc:
-      "Joining NEOMA pushed me to connect creativity and technology every day. I learned to build ideas that actually work, not just concepts on paper.",
+      "Joining NEOMA Business School pushed me to connect creativity and technology every day. I learned to build ideas that actually work, not just concepts on paper.",
     content:
       "- Courses in information systems, CRM, design and strategy\n" +
       "- A future Specialisation in consulting, SQL and database management\n" +
@@ -52,7 +52,7 @@ const panels = [
     logo: "./assets/dsdlogo.png",
     url: "https://www.dsdorganisation.com/",                  // 👈 à ajuster si besoin
     desc:
-      "At DSD, I learned to manage teams, handle fast-paced situations, and keep a professional mindset even under pressure.",
+      "I work part-time in this event staffing agency, I learned to manage teams, handle fast-paced situations, and keep a professional mindset even under pressure.",
     content:
       "- Management of hostess teams\n" +
       "- Coordination of premium events\n" +
@@ -67,7 +67,7 @@ const panels = [
     logo: "./assets/Malakofflogo.jpg",
     url: "https://www.malakoffhumanis.com", // 👈 NEW
     desc:
-      "This internship taught me how data and marketing work together, from benchmarking competitors to improving visibility and content.",
+      "I completed a 2-month internship at this social protection and insurance group, learning how data and marketing work together.",
     content:
       "- Benchmarking of insurance and health competitors\n" +
       "- SEO and visibility optimisation\n" +
@@ -97,7 +97,7 @@ const panels = [
     logo: "./assets/venteuniquelogo.png",
     url: "https://www.vente-unique.com",    // 👈 NEW
     desc:
-      "I worked on CRM and customer data, automating dashboards and supporting teams to optimize campaigns and product decisions.",
+      "Actually doing a 6-months internship, on CRM and customer data, automating dashboards and supporting teams to optimize campaigns and product decisions.",
     content:
       "- Customer data segmentation\n" +
       "- Automation of dashboards and reports\n" +
@@ -113,7 +113,7 @@ const panels = [
     logo: "./assets/Queenslogo.avif",
     url: "https://www.queensu.ca",          // 👈 ou autre si c’est Queen’s Belfast
     desc:
-      "My exchange at Queen’s University will deepen my skills in data science and AI, helping me grow technically and approach problems with a more global mindset.",
+      "A future exchange at Queen’s University will deepen my skills in data science and AI, helping me grow technically and approach problems with a more global mindset.",
     content:
       "- AI coding for business\n" +
       "- Data management and analytics\n" +

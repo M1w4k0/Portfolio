@@ -42,7 +42,7 @@ export default function Footer() {
       setStatus("success");
       setFormData({ name: "", email: "", message: "", website: "" });
       setStartTs(Date.now());
-      setTimeout(() => setStatus("idle"), 2200);
+      setTimeout(() => setStatus("idle"), 7500);
     } catch (err) {
       setErrMsg(err?.message || "Unexpected error");
       setStatus("error");
@@ -121,10 +121,10 @@ export default function Footer() {
 
             <div className="cc-actions">
               <button className="cc-btn" type="submit" disabled={disabled}>
-                {status === "sending" ? "Sending…" : status === "success" ? "Sent!" : "Email me"}
+                {status === "sending" ? "Sending…" : status === "success" ? "Message Sent!" : "Email me"}
               </button>
 
-              <a className="cc-btn ghost" href="https://wa.me/" target="_blank" rel="noreferrer">
+              <a className="cc-btn ghost" href="https://wa.me/33787804653" target="_blank" rel="noreferrer">
                 WhatsApp
               </a>
             </div>
@@ -139,8 +139,8 @@ export default function Footer() {
                     <ul>
                       <li><NavLink to="/experience">Experiences</NavLink></li>
                       <li><NavLink to="/projects">Projects</NavLink></li>
-                      <li><NavLink to="/contact">Contact</NavLink></li>
-                      <li><NavLink to="/">About</NavLink></li>
+                      <li><NavLink to="/contact">Get in touch</NavLink></li>
+                      <li><NavLink to="/">Home</NavLink></li>
                     </ul>
                   </div>
 

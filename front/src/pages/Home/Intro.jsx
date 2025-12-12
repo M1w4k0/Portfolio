@@ -13,7 +13,6 @@ const words = paragraph.split(" ")
   return (
     <>
     <section className="intro-section" data-theme="dark">
-      
       <div className="home-content">
         <div className="hero-tags">
           <div className="tag tag-role">

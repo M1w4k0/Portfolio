@@ -74,7 +74,7 @@ export default function Projet2() {
         <div className="hero-gallery-inner">
 
           <div className="hero-gallery-item2">
-            <img src="./assets/jira2.png" 
+            <img src="./assets/excel1.png" 
             alt="Jira workflow"
             className="imageee" />
           </div>
