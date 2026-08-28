@@ -6,8 +6,8 @@ import ParallaxPage from "../../Components/ParallaxPage/ParallaxDemo.jsx";
 import Character from '../../Components/BlurText/Character2';
 
 
-const paragraph = "Today, I use what I learned almost every day: working, studying, and making decisions with a sense of purpose that grew from all those moments, even the unexpected ones."
-
+const paragraph =
+  "Today, I use what I learned across these experiences almost every day: combining business thinking, data, technology and an international perspective to solve problems with more clarity and purpose.";
 
 export default function Experiences() {
 
@@ -21,7 +21,7 @@ const panels = [
     logo: "./assets/Orangelogo.png",
     url: "https://www.orange.com",          // 👈 NEW
     desc:
-      "This first internship opened the doors to the profesional world for me, by working alongside teams taking on real responsibilities, enough to spark my interest in tech & innovation",
+     "This first internship gave me a glimpse into the professional world and sparked my interest in tech & innovation.",
     content:
       "- Research project in IA and Bigdata \n" +
       "- Introduction to the LPWA & LoRa technologies\n" +
@@ -97,7 +97,7 @@ const panels = [
     logo: "./assets/venteuniquelogo.png",
     url: "https://www.vente-unique.com",    // 👈 NEW
     desc:
-      "Actually doing a 6-months internship, on CRM and customer data, automating dashboards and supporting teams to optimize campaigns and product decisions.",
+      "I worked for 6 months on CRM and customer data, focusing on dashboard automation and campaign optimisation.",
     content:
       "- Customer data segmentation\n" +
       "- Automation of dashboards and reports\n" +
@@ -111,17 +111,18 @@ const panels = [
     num: "07",
     title: "QUEEN'S UNIVERSITY - JAN to MAY 2026",
     logo: "./assets/Queenslogo.avif",
-    url: "https://www.queensu.ca",          // 👈 ou autre si c’est Queen’s Belfast
+    url: "https://www.queensu.ca",
     desc:
-      "A future exchange at Queen’s University will deepen my skills in data science and AI, helping me grow technically and approach problems with a more global mindset.",
+      "I completed an exchange semester at Queen’s University in Canada, deepening my skills in data science, AI and business analytics.",
     content:
-      "- AI coding for business\n" +
-      "- Data management and analytics\n" +
-      "- Data science fundamentals\n" +
-      "- Negotiation and behavioural sciences\n\n" +
-      "",
+      "- International Track exchange semester\n" +
+      "- Coding AI for Business\n" +
+      "- Data Management & Analytics\n" +
+      "- Data Science\n" +
+      "- Final GPA: 4.08 / 4.30\n\n" +
+      "**Queen’s University strengthened my ability to connect technical data skills with real business problems, while also giving me a more international perspective.**",
     img: "./assets/queens.webp",
-    alt: "Strategic discussion",
+    alt: "Queen's University exchange in Kingston, Canada",
   },
 ];
 
@@ -175,7 +176,7 @@ const panels = [
 
             <div className="tp-right">
               <p className="tp-intro-italic">
-                To make it clearer, here’s a short recap of the key experiences that built my skills & my goals. You can hover the items to fetch more content.
+               A short recap of all my experiences. Hover the items to fetch details...
               </p>
             </div>
           </div>

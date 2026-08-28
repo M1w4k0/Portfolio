@@ -6,7 +6,6 @@ import Intro from "./Intro";
 import WhoAmISection from "../../Components/WhoAmI/WhoAmI";
 import Experiences from "../Experiences/Experiences";
 import Projects from "../Projects/Projects";
-import Skills from "../Skills/Skills";
 import Footer from '../../Components/Footer/Footer';
 import ClickSpark from '../../Components/ClickSpark/ClickSpark';
 import './Home.css';
@@ -39,11 +38,10 @@ export default function Home() {
       >
         <Navbar />
         <Intro />
-        <WhoAmISection/>
+        {/* <WhoAmISection/> */}
         {/* <Aboutme/> */}
         <Experiences/>
         <Projects/>
-        {/* <Skills /> */}
         <Footer />
         </ClickSpark>
     </div></>

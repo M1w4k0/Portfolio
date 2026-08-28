@@ -18,15 +18,19 @@ export const MenuItem = ({
   children,
   onClick,
   disableHover = false,
+  disableDropdown = false,
   className = "",
   ...rest
 }) => {
-  // détecter si c’est le bouton “Get in touch”
   const isCTA = className.includes("contact-menu-item");
 
   return (
     <div
-      onMouseEnter={disableHover ? undefined : () => setActive && setActive(item)}
+      onMouseEnter={
+        disableHover || disableDropdown
+          ? undefined
+          : () => setActive && setActive(item)
+      }
       className="relative"
       {...rest}
     >
@@ -36,35 +40,38 @@ export const MenuItem = ({
         transition={{ duration: 0.3 }}
         className={
           isCTA
-            ? // bouton spécial "Get in touch" (on garde le contraste noir sur vert)
-              "bg-[#d7ff88] text-black px-5 py-1.5 rounded-[5px] cursor-pointer border-none"
-            : // tous les autres textes en blanc
-              "cursor-pointer bg-transparent border-none text-white hover:text-[#d7ff88]"
+            ? "bg-[#d7ff88] text-black px-5 py-1.5 rounded-[5px] cursor-pointer border-none"
+            : "cursor-pointer bg-transparent border-none text-white hover:text-[#d7ff88]"
         }
       >
         {item}
       </motion.button>
 
-      {/* pas de dropdown si disableHover = true (mobile) */}
-      {!disableHover && active === item && (
-        <motion.div
-          initial={{ opacity: 0, scale: 0.85, y: 10 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={transition}
-        >
-          <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
-            <motion.div
-              transition={transition}
-              layoutId="active"
-              className="bg-[rgba(14,6,32,0.8)] backdrop-blur-sm rounded-[10px] overflow-hidden border border-white/20 shadow-xl"
-            >
-              <motion.div layout className="w-max h-full p-4 text-white">
-                {children}
+      {!disableHover &&
+        !disableDropdown &&
+        active === item &&
+        children && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.85, y: 10 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={transition}
+          >
+            <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
+              <motion.div
+                transition={transition}
+                layoutId="active"
+                className="bg-[rgba(14,6,32,0.8)] backdrop-blur-sm rounded-[10px] overflow-hidden border border-white/20 shadow-xl"
+              >
+                <motion.div
+                  layout
+                  className="w-max h-full p-4 text-white"
+                >
+                  {children}
+                </motion.div>
               </motion.div>
-            </motion.div>
-          </div>
-        </motion.div>
-      )}
+            </div>
+          </motion.div>
+        )}
     </div>
   );
 };

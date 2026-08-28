@@ -70,12 +70,46 @@ function BreakthroughBlock3() {
       <p className="cc-par-quote-top">
            Within months, I followed an intensive program, during which I had to build a data analysis web platform and a personalized recommendation system for e-commerce.
            It was the first time I truly saw how code and data could work together to bring ideas to life.
-           That’s when I realized I wanted to make my career in data science.    
+           That’s when I realized I wanted to make my career in data.    
       </p>
       </div>
       </section>
   );
 }
+
+    function BreakthroughBlock4() {
+      return (
+        <section className="cc-par-quote">
+          <div className="dot">
+            <span className="cc-par-quote-dot" />
+
+            <p className="cc-little">
+              Queen's University Exchange
+            </p>
+          </div>
+
+          <div className="cc-rightside">
+            <h2 className="cc-par-quote-title">
+              <strong>2026.</strong> Moving to Canada pushed my interest in data
+              and AI one step further: from understanding the tools to using them
+              to solve real business problems.
+            </h2>
+
+            <p className="cc-par-quote-top">
+              During my exchange semester at Queen&apos;s University in Kingston,
+              I followed the International Track with courses in Coding AI for
+              Business, Data Management & Analytics, and Data Science.
+              <br /><br />
+              It was an opportunity to work on more advanced data and machine
+              learning projects in mixed teams with students from engineering, while developing a stronger understanding of how
+              analytics can support business decisions.
+              <br /><br />
+              I completed the semester with a final GPA of 4.08 / 4.30.
+            </p>
+          </div>
+        </section>
+      );
+    }
 
 
 
@@ -151,6 +185,15 @@ export default function ParallaxPage() {
  
       />
       <BreakthroughBlock3 />
+
+      {/* Section 4 */}
+      <Section
+        image="/assets/queens.webp"
+        title="Queen's University: Data Meets Business"
+        copy="My exchange semester in Canada helped me deepen my focus on Data, AI and Business Analytics."
+      />
+
+<BreakthroughBlock4 />
 
 
       {/* Fin de page */}

@@ -4,7 +4,7 @@
 
 .ready { 
   position: relative; 
-  min-height: 100vh; 
+  min-height: 70vh; 
   background: #0e0620; 
   color: #ffffff; 
   padding: 6vh 6vw 6vh; 
@@ -78,7 +78,7 @@
 .ready__sideword { 
   position: absolute; 
   right: -13px; 
-  bottom: 65%; 
+  bottom: 75%; 
   transform: rotate(-90deg); 
   transform-origin: bottom right; 
   font-size: 3.8rem; 

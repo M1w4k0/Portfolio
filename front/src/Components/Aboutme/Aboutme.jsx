@@ -5,7 +5,7 @@ import './Aboutme.css';
 import { IoIosDownload } from "react-icons/io";
 
 
-const paragraph = "What I always do when direction isn’t given : I build it.";
+const paragraph = "Now, I want to put it into practice with you.";
 
 const items = [
   { icon: <IoIosDownload />, color: 'blue', language: "French", file: '/assets/CVZoeCharrierFR.pdf'   },
@@ -49,32 +49,31 @@ export default function Aboutme() {
               <div className="sc-grid">
                 <div className="sc-num">01</div>
                 <div className="sc-rule" />
-                <h2 className="sc-head">WHEN DREAMS START<br />SMALL</h2>
+                <h2 className="sc-head"> WHERE IT STARTED<br />SMALL</h2>
                 <div className="sc-body">
                   <p>
-                    I grew up near Angers, in a small town where my days were shaped by nature,
-                    school, and sports. With a simple environment, I learned early on how to stay
-                    curious, creative, and resourceful.
+                    I grew up near Angers, in a small town where school, sports and creative
+                    hobbies took up most of my time.
                   </p>
                   <p>
-                    Having time to myself helped me develop strong independence, focus deeply on
-                    what interested me, and continuously explore new ideas driven by curiosity.
+                   It was a fairly simple environment, but it gave me a lot of independence
+                    and time to explore things on my own. I became curious, resourceful, and
+                   used to learning by trying.
                   </p>
                   <p>
-                    In 3ème, everything shifted when I moved to Paris to live with my dad.
-                    A new city, new surroundings, and suddenly a much wider world opened up,
-                    full of opportunities and perspectives I was eager to discover.
+                    In middle school, I moved to Paris to live with my dad. Changing
+                    environments exposed me to new schools, people and opportunities, and
+                    gradually broadened what I imagined doing later.
                   </p>
                 </div>
 
                 <div className="sc-foot">
                   <span className="sc-dot" />
-                  <em>Lesson carried forward:</em>
+                  <em>What I kept from it:</em>
                 </div>
 
                 <blockquote className="sc-quote">
-                  I know what it feels like to start small, and still decide to build
-                  something bigger for myself.
+                  Curiosity and independence have always been a big part of how I learn.
                 </blockquote>
               </div>
             </div>
@@ -84,30 +83,31 @@ export default function Aboutme() {
               <div className="sc-grid">
                 <div className="sc-num">02</div>
                 <div className="sc-rule" />
-                <h2 className="sc-head">A NEW GAP</h2>
+                <h2 className="sc-head">FINDING MY DIRECTION</h2>
                 <div className="sc-body">
                   <p>
-                    In Paris, I joined a strong athletics club, and learned real discipline. I also had the chance to study at EPIN, one of the top high schools in France,
-                    a place that pushed me to aim higher.
+                     In Paris, athletics became an important part of my routine and taught me
+                    consistency, discipline and how to keep working toward long-term goals.
                   </p>
                   <p>
-                    After graduating with honors, I choosed to study at NEOMA BS: a business program with a strong tech focus.
-                     Through projects and internships, I discovered data, code, and product thinking as ways to understand how things work.
+                     After high school, I joined NEOMA's TEMA program because I wanted a
+                    degree that combined business with technology rather than choosing only
+                    one of the two.
                   </p>
                   <p>
-                    My interests became clearer: I like connecting strategy,
-                    numbers, and human behavior, using data and AI to make better decisions
-                    and build useful systems.
+                     Through classes, projects, internships and exchanges, I progressively
+                    became more interested in data, AI and the way technical tools can help
+                    solve business problems.
                   </p>
                 </div>
 
                 <div className="sc-foot">
                   <span className="sc-dot" />
-                  <em>Lesson carried forward:</em>
+                  <em>What I kept from it:</em>
                 </div>
 
                 <blockquote className="sc-quote">
-                  For me, discipline builds performance, and insights build direction.
+                  I like working where business questions and technical solutions meet.
                 </blockquote>
               </div>
             </div>
@@ -124,8 +124,8 @@ export default function Aboutme() {
                     curiosity naturally led me.
                   </p>
                   <p>
-                    I want to work on thoughtful, data-driven problems with teams that care
-                    about craft and clarity. Learn fast, ship well, keep improving.
+                   I enjoy understanding a problem, working with data, and turning the
+                    analysis into something useful for a team or a business decision.
                   </p>
                   <p>
                     That’s why I plan to follow a specialization in IS Consulting / Database Management & SQL at NEOMA, and obtain 
@@ -139,11 +139,12 @@ export default function Aboutme() {
 
                 <div className="sc-foot">
                   <span className="sc-dot" />
-                  <em>Lesson carried forward:</em>
+                  <em>What I'm looking for:</em>
                 </div>
 
                 <blockquote className="sc-quote">
-                  Understanding what matters is the foundation of everything else.
+                  Projects where I can keep learning while working on real data and business
+                  problems.
                 </blockquote>
               </div>
               <div className="separateur-sticky3"></div>
@@ -175,11 +176,11 @@ export default function Aboutme() {
             Everything you need to know is inside
           </p>
 
-          <div className="fc-copy">
+          {/* <div className="fc-copy">
             <p className="fc-text">
               If you’re looking to understand the progression behind my skills, or remember my journey: my CV tells the entire story with clarity.
             </p>
-          </div>
+          </div> */}
         </div>
 
         {/* Colonne droite : visuel 3D */}

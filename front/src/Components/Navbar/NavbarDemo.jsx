@@ -100,18 +100,16 @@ function Navbar({ className }) {
       <div className="hidden md:block text-white">
         <Menu setActive={setActive} className="text-white">
           {/* HOME */}
-          <MenuItem
+
+           <MenuItem
             setActive={setActive}
             active={active}
             item="Home"
             className="text-white"
+            disableDropdown
             onClick={() => navigate("/")}
-          >
-            <div className="flex flex-col space-y-4 text-[15px] text-white">
-              <HoveredLink href="/#whoami">Who am I</HoveredLink>
-              <HoveredLink href="/#mygoals">My goals</HoveredLink>
-            </div>
-          </MenuItem>
+          />
+
 
           {/* EXPERIENCE */}
           <MenuItem
@@ -120,8 +118,8 @@ function Navbar({ className }) {
             item="Experience"
             className="text-white"
             onClick={() => navigate("/experience")}
-          >
-            <div className="flex flex-col space-y-4 text-[15px] text-white">
+          />
+            {/* <div className="flex flex-col space-y-4 text-[15px] text-white">
               <HoveredLink href="/experience#journey">
                 My journey into tech
               </HoveredLink>
@@ -129,36 +127,39 @@ function Navbar({ className }) {
                 Jobs & internships
               </HoveredLink>
             </div>
-          </MenuItem>
+          </MenuItem> */}
 
-          {/* PROJECTS – now same style as others, list of links */}
+          {/* PROJECTS */}
           <MenuItem
             setActive={setActive}
             active={active}
             item="Projects"
             className="text-white"
             onClick={() => navigate("/projects")}
-          >
-            <div className="flex flex-col space-y-4 text-[15px] text-white">
-              <HoveredLink href="/projects#project-1">
+           >
+            {/* <div className="flex flex-col space-y-4 text-[15px] text-white">
+
+              <HoveredLink href="/projects/yowl">
                 YOWL – UGC review platform
               </HoveredLink>
-              <HoveredLink href="/projects#project-2">
+
+              <HoveredLink href="/projects/business-data">
                 Data & visualisations – Jupyter analysis
               </HoveredLink>
-              <HoveredLink href="/projects#project-3">
+
+              <HoveredLink href="/projects/myshop">
                 MyShop – full-stack e-commerce
               </HoveredLink>
-              <HoveredLink href="/projects#project-4">
+
+              <HoveredLink href="/projects/crm-scandinavia">
                 CRM launch – Scandinavian markets
               </HoveredLink>
-              <HoveredLink href="/projects#project-5">
-                Linear algebra for ML – Coursera
-              </HoveredLink>
-              <HoveredLink href="/projects#project-6">
+
+              <HoveredLink href="/projects/snackup">
                 Snack’Up – Startup Challenge
               </HoveredLink>
-            </div>
+
+            </div> */}
           </MenuItem>
 
           {/* CONTACT */}
